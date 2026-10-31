@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://cx14bx8bubj1t" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff4.png" id="29_dtgt0"]
 [ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="30_txrau"]
 [ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="31_khp6g"]
+[ext_resource type="Texture2D" uid="uid://utf8ox3c5srq" path="res://Assets/Sprites/CLIMB.png" id="32_khp6g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
 texture = ExtResource("1_ic1cm")
@@ -924,3 +925,7 @@ texture = ExtResource("30_txrau")
 [node name="Arrowsandstuff3" type="Sprite2D" parent="Deco" unique_id=2136540003]
 position = Vector2(-184, -298)
 texture = ExtResource("31_khp6g")
+
+[node name="Climb" type="Sprite2D" parent="Deco" unique_id=1367397781]
+position = Vector2(233, -608)
+texture = ExtResource("32_khp6g")
