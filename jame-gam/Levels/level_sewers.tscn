@@ -29,6 +29,8 @@
 [ext_resource type="Texture2D" uid="uid://c3n8qe07teobl" path="res://Assets/Sprites/Fly.png" id="27_dtgt0"]
 [ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="28_gjh0q"]
 [ext_resource type="Texture2D" uid="uid://cx14bx8bubj1t" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff4.png" id="29_dtgt0"]
+[ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="30_txrau"]
+[ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="31_khp6g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
 texture = ExtResource("1_ic1cm")
@@ -880,6 +882,7 @@ rotates = true
 rotation = -0.0013465881
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Flys/Fly4/AnimatableBody2D" unique_id=986786680]
+position = Vector2(5.9771028, 17.008064)
 sprite_frames = SubResource("SpriteFrames_6cv6t")
 autoplay = "default"
 
@@ -890,6 +893,7 @@ rotation = 0.0013465881
 stream = ExtResource("28_gjh0q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flys/Fly4/AnimatableBody2D/killzone" unique_id=1460873058]
+position = Vector2(6, 17)
 shape = SubResource("RectangleShape2D_txrau")
 
 [node name="Path" type="Path2D" parent="Flys/Fly4" unique_id=496989683]
@@ -906,7 +910,17 @@ rotates = false
 root_node = NodePath("../Path/Follow")
 libraries/ = SubResource("AnimationLibrary_v5qog")
 
-[node name="Arrowsandstuff4" type="Sprite2D" parent="." unique_id=416257011]
+[node name="Deco" type="Node2D" parent="." unique_id=1444498702]
+
+[node name="Arrowsandstuff4" type="Sprite2D" parent="Deco" unique_id=416257011]
 position = Vector2(-248, -168)
-rotation = 4.712389
+rotation = -1.5707964
 texture = ExtResource("29_dtgt0")
+
+[node name="Arrowsandstuff1" type="Sprite2D" parent="Deco" unique_id=1566999872]
+position = Vector2(279, -316)
+texture = ExtResource("30_txrau")
+
+[node name="Arrowsandstuff3" type="Sprite2D" parent="Deco" unique_id=2136540003]
+position = Vector2(-184, -298)
+texture = ExtResource("31_khp6g")
