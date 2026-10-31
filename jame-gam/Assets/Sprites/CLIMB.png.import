@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6u1fqwnqrhxt"
-path="res://.godot/imported/GRAMMAHOUSE.png-0302081b8bcec0b6b6814149615f3ca9.ctex"
+uid="uid://utf8ox3c5srq"
+path="res://.godot/imported/CLIMB.png-2181383e67b46429fdfec34eb4383103.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/GRAMMAHOUSE.png"
-dest_files=["res://.godot/imported/GRAMMAHOUSE.png-0302081b8bcec0b6b6814149615f3ca9.ctex"]
+source_file="res://Assets/Sprites/CLIMB.png"
+dest_files=["res://.godot/imported/CLIMB.png-2181383e67b46429fdfec34eb4383103.ctex"]
 
 [params]
 

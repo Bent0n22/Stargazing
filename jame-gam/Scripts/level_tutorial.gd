@@ -23,22 +23,22 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		DialogManager.start_dialog(Vector2(510, -8), lines, sfx)
 		$Area2D2.queue_free()
-	pass # Replace with function body.
+	pass
 
-var range = false
+var in_range = false
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		range = true
-	pass # Replace with function body.
+		in_range = true
+	pass
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
-		range = false
-	pass # Replace with function body.
+		in_range = false
+	pass
 
 func _process(_delta: float) -> void:
-	if range and $Area2D2 != null:
+	if in_range and $Area2D2 != null:
 		if Input.is_action_just_pressed("Interact"):
 			$Area2D2.queue_free()
 	if GameController.leverStatus:
