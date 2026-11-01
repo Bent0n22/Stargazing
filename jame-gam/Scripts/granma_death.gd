@@ -17,24 +17,18 @@ var killed_granma = false
 @onready var label: Label = $Area2D/CollisionShape2D/Label
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body.name + "ENTERED")
-	
-	
 	if body.name == "CharacterBody2D":
 		player_in_range = true
-		print("Enter")
 		label.visible = true
 func _process(_delta: float) -> void:
 	if !DialogManager.is_dialog_active && had_dialogue == true && killed_granma == false:
 		granma_death.play("death")
 		self.queue_free()
-		print("death")
 		killed_granma = true
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		player_in_range = false
-	print(body.name)
 	label.visible = false
 
 var can_talk = true

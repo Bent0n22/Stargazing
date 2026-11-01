@@ -8,7 +8,6 @@ extends Node2D
 var player_in_range = false
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body.name)
 	if body.name == "CharacterBody2D":
 		player_in_range = true
 		label.visible = true
@@ -45,17 +44,3 @@ func _unhandled_input(_event):
 			GameController.time_into_music = 0
 			GameController.tempVars.temp_pos = pos_to
 			SceneLoaderScene.transition_to_scene(file_to)
-
-#func _process(delta: float) -> void:
-	#
-	#if player_in_range:
-		#if Input.is_action_just_pressed("Interact") && can_talk:
-			#if backyardkeys:
-				#if GameController.key_count >= 2:
-					#GameController.tempVars.temp_pos = pos_to
-					#SceneLoaderScene.transition_to_scene(file_to)
-				#else:
-					#DialogManager.start_dialog(Vector2(1900, -66), lines, sfx)
-			#else:
-				#GameController.tempVars.temp_pos = pos_to
-				#SceneLoaderScene.transition_to_scene(file_to)

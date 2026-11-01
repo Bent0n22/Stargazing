@@ -46,7 +46,6 @@ func _unhandled_input(event):
 	
 		current_line_index += 1
 		if current_line_index >= dialog_lines.size():
-			print(current_line_index)
 			is_dialog_active = false
 			current_line_index = 0
 			return
