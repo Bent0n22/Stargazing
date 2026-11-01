@@ -72,6 +72,7 @@ texture_normal = ExtResource("6_w5qgn")
 texture_pressed = ExtResource("7_vmi34")
 texture_hover = ExtResource("8_o5iem")
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/mute" to="." method="_on_mute_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
