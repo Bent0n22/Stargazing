@@ -79,7 +79,7 @@ wait_time = 5.0
 position = Vector2(48, 132)
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tb2w5")
-frame_progress = 0.7659599
+frame_progress = 0.7271619
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1218610629]
 stream = ExtResource("12_cgbk6")

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://Scripts/bee.gd" id="1_qarim"]
 [ext_resource type="Texture2D" uid="uid://c3n8qe07teobl" path="res://Assets/Sprites/Fly.png" id="2_qarim"]
 [ext_resource type="PackedScene" uid="uid://bkubcpkvd3sv5" path="res://Elements/killzone.tscn" id="3_7c42i"]
-[ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="4_6cv6t"]
+[ext_resource type="AudioStream" uid="uid://c32040o4wyw4a" path="res://Assets/Audio/freesound_community-180526-bee-buzzing-away-isolated-event-toronto-94455.mp3" id="4_6cv6t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7c42i"]
 atlas = ExtResource("2_qarim")
@@ -89,6 +89,7 @@ rotation = 0.0013465881
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="AnimatableBody2D/killzone" unique_id=1890019426]
 stream = ExtResource("4_6cv6t")
+pitch_scale = 2.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D/killzone" unique_id=1460873058]
 position = Vector2(0, 1)

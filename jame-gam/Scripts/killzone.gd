@@ -15,7 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 		GameController.has_died_gruesomely += 1
 		pbody = body
 		timer.start(3)
-		audio_stream_player_2d.play()
+		audio_stream_player_2d.play(0.25)
 		var little_guy_ragdoll = ragdoll_of_fun_and_whimsy.instantiate()
 		little_guy_ragdoll.global_position = body.global_position
 		little_guy_ragdoll.get_node("RigidBody2D").linear_velocity = body.velocity
