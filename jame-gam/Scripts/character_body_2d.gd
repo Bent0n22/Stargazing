@@ -13,7 +13,7 @@ const buffer = 6
 var buffer_frames = 0
 
 func _physics_process(delta: float) -> void:
-	
+	print($Camera2D.offset)
 	if DialogManager.is_dialog_active && is_on_floor():
 		animated_sprite_2d.play("Idle")
 		return

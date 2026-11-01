@@ -633,82 +633,6 @@ texture = ExtResource("12_3vdbj")
 position = Vector2(442, -494)
 texture = ExtResource("11_41vca")
 
-[node name="GrateSpriteStanding2" type="Sprite2D" parent="InactiveStarts" unique_id=765725134]
-position = Vector2(-486, -233)
-texture = ExtResource("21_5drew")
-
-[node name="GrateSpriteStanding3" type="Sprite2D" parent="InactiveStarts" unique_id=778737480]
-position = Vector2(-458, -233)
-texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding1" type="Sprite2D" parent="InactiveStarts" unique_id=324425755]
-position = Vector2(-472, -233)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding4" type="Sprite2D" parent="InactiveStarts" unique_id=1429276797]
-position = Vector2(-534, -281)
-texture = ExtResource("21_5drew")
-
-[node name="GrateSpriteStanding5" type="Sprite2D" parent="InactiveStarts" unique_id=1674685783]
-position = Vector2(-520, -281)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding6" type="Sprite2D" parent="InactiveStarts" unique_id=1588068603]
-position = Vector2(-506, -281)
-texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding7" type="Sprite2D" parent="InactiveStarts" unique_id=276060324]
-position = Vector2(410, -297)
-texture = ExtResource("21_5drew")
-
-[node name="GrateSpriteStanding8" type="Sprite2D" parent="InactiveStarts" unique_id=1310804504]
-position = Vector2(426, -297)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding9" type="Sprite2D" parent="InactiveStarts" unique_id=775649006]
-position = Vector2(442, -297)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding10" type="Sprite2D" parent="InactiveStarts" unique_id=1509292739]
-position = Vector2(454, -297)
-texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding11" type="Sprite2D" parent="InactiveStarts" unique_id=1896523320]
-position = Vector2(730, -441)
-texture = ExtResource("21_5drew")
-
-[node name="GrateSpriteStanding12" type="Sprite2D" parent="InactiveStarts" unique_id=1822883202]
-position = Vector2(746, -441)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding13" type="Sprite2D" parent="InactiveStarts" unique_id=511388697]
-position = Vector2(762, -441)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding14" type="Sprite2D" parent="InactiveStarts" unique_id=619312]
-position = Vector2(778, -441)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding15" type="Sprite2D" parent="InactiveStarts" unique_id=999928098]
-position = Vector2(794, -441)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding16" type="Sprite2D" parent="InactiveStarts" unique_id=476478356]
-position = Vector2(806, -441)
-texture = ExtResource("22_brrmp")
-
-[node name="GrateSpriteStanding17" type="Sprite2D" parent="InactiveStarts" unique_id=1929544504]
-position = Vector2(426, -505)
-texture = ExtResource("21_5drew")
-
-[node name="GrateSpriteStanding18" type="Sprite2D" parent="InactiveStarts" unique_id=439798137]
-position = Vector2(442, -505)
-texture = ExtResource("23_2ddu0")
-
-[node name="GrateSpriteStanding19" type="Sprite2D" parent="InactiveStarts" unique_id=2010770165]
-position = Vector2(454, -505)
-texture = ExtResource("22_brrmp")
-
 [node name="BlueGrates" type="Node2D" parent="." unique_id=1215517209]
 
 [node name="GrateSpriteStanding1" type="Sprite2D" parent="BlueGrates" unique_id=27025753]
@@ -823,6 +747,30 @@ texture = ExtResource("21_5drew")
 position = Vector2(150, -249)
 texture = ExtResource("22_brrmp")
 
+[node name="GrateSpriteStanding29" type="Sprite2D" parent="BlueGrates" unique_id=765725134]
+position = Vector2(-486, -233)
+texture = ExtResource("21_5drew")
+
+[node name="GrateSpriteStanding30" type="Sprite2D" parent="BlueGrates" unique_id=778737480]
+position = Vector2(-458, -233)
+texture = ExtResource("22_brrmp")
+
+[node name="GrateSpriteStanding31" type="Sprite2D" parent="BlueGrates" unique_id=324425755]
+position = Vector2(-472, -233)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding32" type="Sprite2D" parent="BlueGrates" unique_id=1429276797]
+position = Vector2(-534, -281)
+texture = ExtResource("21_5drew")
+
+[node name="GrateSpriteStanding33" type="Sprite2D" parent="BlueGrates" unique_id=1674685783]
+position = Vector2(-520, -281)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding34" type="Sprite2D" parent="BlueGrates" unique_id=1588068603]
+position = Vector2(-506, -281)
+texture = ExtResource("22_brrmp")
+
 [node name="GreyGrates" type="Node2D" parent="." unique_id=347203706]
 
 [node name="GrateSpriteStanding2" type="Sprite2D" parent="GreyGrates" unique_id=1899180520]
@@ -863,6 +811,58 @@ texture = ExtResource("23_2ddu0")
 
 [node name="GrateSpriteStanding10" type="Sprite2D" parent="GreyGrates" unique_id=263412335]
 position = Vector2(230, -121)
+texture = ExtResource("22_brrmp")
+
+[node name="GrateSpriteStanding17" type="Sprite2D" parent="GreyGrates" unique_id=276060324]
+position = Vector2(410, -297)
+texture = ExtResource("21_5drew")
+
+[node name="GrateSpriteStanding18" type="Sprite2D" parent="GreyGrates" unique_id=1310804504]
+position = Vector2(426, -297)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding19" type="Sprite2D" parent="GreyGrates" unique_id=775649006]
+position = Vector2(442, -297)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding20" type="Sprite2D" parent="GreyGrates" unique_id=1509292739]
+position = Vector2(454, -297)
+texture = ExtResource("22_brrmp")
+
+[node name="GrateSpriteStanding21" type="Sprite2D" parent="GreyGrates" unique_id=1896523320]
+position = Vector2(730, -441)
+texture = ExtResource("21_5drew")
+
+[node name="GrateSpriteStanding22" type="Sprite2D" parent="GreyGrates" unique_id=1822883202]
+position = Vector2(746, -441)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding23" type="Sprite2D" parent="GreyGrates" unique_id=511388697]
+position = Vector2(762, -441)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding24" type="Sprite2D" parent="GreyGrates" unique_id=619312]
+position = Vector2(778, -441)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding25" type="Sprite2D" parent="GreyGrates" unique_id=999928098]
+position = Vector2(794, -441)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding26" type="Sprite2D" parent="GreyGrates" unique_id=476478356]
+position = Vector2(806, -441)
+texture = ExtResource("22_brrmp")
+
+[node name="GrateSpriteStanding27" type="Sprite2D" parent="GreyGrates" unique_id=1929544504]
+position = Vector2(426, -505)
+texture = ExtResource("21_5drew")
+
+[node name="GrateSpriteStanding28" type="Sprite2D" parent="GreyGrates" unique_id=439798137]
+position = Vector2(442, -505)
+texture = ExtResource("23_2ddu0")
+
+[node name="GrateSpriteStanding29" type="Sprite2D" parent="GreyGrates" unique_id=2010770165]
+position = Vector2(454, -505)
 texture = ExtResource("22_brrmp")
 
 [node name="Flys" type="Node2D" parent="." unique_id=1144257296]
@@ -916,6 +916,12 @@ libraries/ = SubResource("AnimationLibrary_v5qog")
 
 [node name="Deco" type="Node2D" parent="." unique_id=1444498702]
 
+[node name="Arrowsandstuff5" type="Sprite2D" parent="Deco" unique_id=1961077095]
+position = Vector2(-400, -353)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("29_dtgt0")
+
 [node name="Arrowsandstuff4" type="Sprite2D" parent="Deco" unique_id=416257011]
 position = Vector2(-248, -168)
 rotation = -1.5707964
@@ -944,8 +950,3 @@ texture = ExtResource("34_mv0r0")
 [node name="Sign2" type="Sprite2D" parent="Deco" unique_id=1607255422]
 position = Vector2(96, -178)
 texture = ExtResource("35_1n6sd")
-
-[node name="Arrowsandstuff4" type="Sprite2D" parent="." unique_id=1961077095]
-position = Vector2(-400, -353)
-scale = Vector2(-1, 1)
-texture = ExtResource("29_dtgt0")

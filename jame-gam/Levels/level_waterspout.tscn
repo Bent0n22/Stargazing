@@ -14,8 +14,13 @@
 [ext_resource type="AudioStream" uid="uid://dutgu61kvpm6r" path="res://Assets/Audio/waterspout.mp3" id="13_b5q0m"]
 [ext_resource type="Texture2D" uid="uid://utf8ox3c5srq" path="res://Assets/Sprites/CLIMB.png" id="14_023aw"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="14_chk86"]
+[ext_resource type="Texture2D" uid="uid://cx14bx8bubj1t" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff4.png" id="14_h4k4l"]
+[ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="15_ar6hd"]
 [ext_resource type="Texture2D" uid="uid://b5f1lkaxmog34" path="res://Assets/Font/Sign4.png" id="15_wfuao"]
 [ext_resource type="Texture2D" uid="uid://yjsreeql0ve0" path="res://Assets/Font/Sign3.png" id="16_nusop"]
+[ext_resource type="Texture2D" uid="uid://bmnudfopx1md" path="res://Assets/Font/Sign2.png" id="19_oqecd"]
+[ext_resource type="Texture2D" uid="uid://cr60tx4qxecly" path="res://Assets/Font/Sign1.png" id="20_bo820"]
+[ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="21_hljap"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f01tw"]
 texture = ExtResource("4_x2iaj")
@@ -263,16 +268,59 @@ position = Vector2(0.5, 21)
 shape = SubResource("RectangleShape2D_evjyw")
 debug_color = Color(0, 0.6513631, 0.04072488, 0.41960785)
 
-[node name="Climb" type="Sprite2D" parent="." unique_id=488535766]
-position = Vector2(99, -26)
+[node name="Deco" type="Node2D" parent="." unique_id=1912331539]
+
+[node name="Arrowsandstuff8" type="Sprite2D" parent="Deco" unique_id=565493116]
+position = Vector2(59, -97)
+rotation = 1.5707964
+texture = ExtResource("14_h4k4l")
+
+[node name="Arrowsandstuff5" type="Sprite2D" parent="Deco" unique_id=798026680]
+position = Vector2(83, -764)
+texture = ExtResource("15_ar6hd")
+
+[node name="Arrowsandstuff6" type="Sprite2D" parent="Deco" unique_id=1725879982]
+position = Vector2(156, -700)
+texture = ExtResource("15_ar6hd")
+
+[node name="Arrowsandstuff7" type="Sprite2D" parent="Deco" unique_id=1644539839]
+position = Vector2(35, -812)
+texture = ExtResource("15_ar6hd")
+
+[node name="Climb" type="Sprite2D" parent="Deco" unique_id=488535766]
+position = Vector2(100, -26)
 texture = ExtResource("14_023aw")
 
-[node name="Sign4" type="Sprite2D" parent="." unique_id=1139695404]
-position = Vector2(57, 1)
+[node name="Sign4" type="Sprite2D" parent="Deco" unique_id=1139695404]
+position = Vector2(58, 1)
 texture = ExtResource("15_wfuao")
 
-[node name="Sign3" type="Sprite2D" parent="." unique_id=705452886]
-position = Vector2(57, -18)
+[node name="Sign3" type="Sprite2D" parent="Deco" unique_id=705452886]
+position = Vector2(58, -18)
 texture = ExtResource("16_nusop")
+
+[node name="Sign2" type="Sprite2D" parent="Deco" unique_id=1200443409]
+position = Vector2(138, -1737)
+texture = ExtResource("19_oqecd")
+
+[node name="Arrowsandstuff4" type="Sprite2D" parent="Deco" unique_id=2038681429]
+position = Vector2(145, -1822)
+rotation = 3.1415927
+scale = Vector2(1, -1)
+texture = ExtResource("14_h4k4l")
+
+[node name="Sign1" type="Sprite2D" parent="Deco" unique_id=7752577]
+position = Vector2(46, -1569)
+texture = ExtResource("20_bo820")
+
+[node name="Arrowsandstuff3" type="Sprite2D" parent="Deco" unique_id=2101141731]
+position = Vector2(173, -1583)
+scale = Vector2(1, -1)
+texture = ExtResource("15_ar6hd")
+
+[node name="Arrowsandstuff1" type="Sprite2D" parent="Deco" unique_id=683303626]
+position = Vector2(147, -573)
+scale = Vector2(1, -1)
+texture = ExtResource("21_hljap")
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
