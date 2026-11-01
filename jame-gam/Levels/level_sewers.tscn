@@ -25,9 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://cg6syantu0kje" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding3.png" id="22_brrmp"]
 [ext_resource type="Texture2D" uid="uid://r3d16frdm0bf" path="res://Assets/Sprites/Grate Standing/GrateSpriteStanding1.png" id="23_2ddu0"]
 [ext_resource type="Texture2D" uid="uid://didxosfixk8im" path="res://Assets/Sprites/Pipe/Pipe of Despair1.png" id="24_2ddu0"]
-[ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://Scripts/bee.gd" id="26_3yo0i"]
-[ext_resource type="Texture2D" uid="uid://c3n8qe07teobl" path="res://Assets/Sprites/Fly.png" id="27_dtgt0"]
-[ext_resource type="AudioStream" uid="uid://c32040o4wyw4a" path="res://Assets/Audio/freesound_community-180526-bee-buzzing-away-isolated-event-toronto-94455.mp3" id="28_jfhgv"]
 [ext_resource type="Texture2D" uid="uid://cx14bx8bubj1t" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff4.png" id="29_dtgt0"]
 [ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="30_txrau"]
 [ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="31_khp6g"]
@@ -160,73 +157,6 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_von8r"),
 &"pipe_exit": SubResource("Animation_whc7m")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7c42i"]
-atlas = ExtResource("27_dtgt0")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6cv6t"]
-atlas = ExtResource("27_dtgt0")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6cv6t"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7c42i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6cv6t")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mv0r0"]
-size = Vector2(12, 8)
-
-[sub_resource type="Curve2D" id="Curve2D_v5qog"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -42, -41, 0, 0, 0, 0, 1, -79, 0, 0, 0, 0, 44, -38, 0, 0, -14.015, 116.25, 0, 0)
-}
-point_count = 5
-
-[sub_resource type="Animation" id="Animation_v5qog"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="Animation" id="Animation_xww1r"]
-resource_name = "move_along_path"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 1.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_v5qog"]
-_data = {
-&"RESET": SubResource("Animation_v5qog"),
-&"move_along_path": SubResource("Animation_xww1r")
 }
 
 [node name="sewers level" type="Node2D" unique_id=1043215759]
@@ -876,40 +806,8 @@ position = Vector2(33, -208)
 [node name="Fly3" parent="Flys" unique_id=1151669773 instance=ExtResource("8_5i12g")]
 position = Vector2(-231, -302)
 
-[node name="Fly4" type="Node2D" parent="Flys" unique_id=1135977657]
-position = Vector2(574, -314)
-script = ExtResource("26_3yo0i")
-time_to_complete_path = 2.0
-rotates = true
-
-[node name="AnimatableBody2D" type="AnimatableBody2D" parent="Flys/Fly4" unique_id=51600981]
-rotation = -0.0013465881
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Flys/Fly4/AnimatableBody2D" unique_id=986786680]
-sprite_frames = SubResource("SpriteFrames_6cv6t")
-autoplay = "default"
-
-[node name="killzone" parent="Flys/Fly4/AnimatableBody2D" unique_id=953273365 instance=ExtResource("13_8cmjj")]
-rotation = 0.0013465881
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Flys/Fly4/AnimatableBody2D/killzone" unique_id=1890019426]
-stream = ExtResource("28_jfhgv")
-pitch_scale = 2.4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Flys/Fly4/AnimatableBody2D/killzone" unique_id=1460873058]
-position = Vector2(0, 1)
-shape = SubResource("RectangleShape2D_mv0r0")
-
-[node name="Path" type="Path2D" parent="Flys/Fly4" unique_id=496989683]
-curve = SubResource("Curve2D_v5qog")
-
-[node name="Follow" type="PathFollow2D" parent="Flys/Fly4/Path" unique_id=1661702296]
-rotation = 1.072439
-rotates = false
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Flys/Fly4" unique_id=1884343722]
-root_node = NodePath("../Path/Follow")
-libraries/ = SubResource("AnimationLibrary_v5qog")
+[node name="Fly4" parent="Flys" unique_id=582545504 instance=ExtResource("8_5i12g")]
+position = Vector2(569, -315)
 
 [node name="Deco" type="Node2D" parent="." unique_id=1444498702]
 
