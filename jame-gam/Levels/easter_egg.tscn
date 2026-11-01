@@ -2,10 +2,52 @@
 
 [ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="1_jbfbe"]
 [ext_resource type="Script" uid="uid://cdvybjw41d83h" path="res://Scripts/easter_egg.gd" id="1_pv1xg"]
+[ext_resource type="Texture2D" uid="uid://csm0euo0s2qih" path="res://Sprites/Roomba1.png" id="3_soy3b"]
+[ext_resource type="Texture2D" uid="uid://gajyu5t1toay" path="res://Sprites/Roomba2.png" id="4_3jlun"]
+[ext_resource type="Texture2D" uid="uid://1vho8xssql3w" path="res://Sprites/Roomba3.png" id="5_cgbk6"]
+[ext_resource type="Texture2D" uid="uid://bflvqsjij4buw" path="res://Sprites/Roomba4.png" id="6_jlhi0"]
+[ext_resource type="Texture2D" uid="uid://ogb4ahg7ylk0" path="res://Sprites/Roomba5.png" id="7_yuam3"]
+[ext_resource type="Texture2D" uid="uid://xdfu1r4b4csi" path="res://Sprites/Roomba6.png" id="8_slej1"]
+[ext_resource type="Texture2D" uid="uid://byofi42p1vg5s" path="res://Sprites/Roomba7.png" id="9_y2jba"]
+[ext_resource type="Texture2D" uid="uid://dh35lmatwfa77" path="res://Sprites/Roomba8.png" id="10_vdhy2"]
+[ext_resource type="Texture2D" uid="uid://b4nxy8nf0aedb" path="res://Sprites/rainbowroad.png" id="11_3jlun"]
+[ext_resource type="AudioStream" uid="uid://djmyrtpl3gvo1" path="res://Assets/Audio/backyard.mp3" id="12_cgbk6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_7vadr"]
 font = ExtResource("1_jbfbe")
 font_size = 250
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tb2w5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_soy3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3jlun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cgbk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jlhi0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yuam3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_slej1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_y2jba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vdhy2")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 17.0
+}]
 
 [node name="EasterEgg" type="Node2D" unique_id=136087382]
 script = ExtResource("1_pv1xg")
@@ -13,7 +55,16 @@ script = ExtResource("1_pv1xg")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=5130880]
 position = Vector2(160, 90)
 
+[node name="Rainbowroad" type="Sprite2D" parent="." unique_id=115571319]
+position = Vector2(160, 90)
+texture = ExtResource("11_3jlun")
+
+[node name="Rainbowroad2" type="Sprite2D" parent="Rainbowroad" unique_id=1699241304]
+position = Vector2(-320, 0)
+texture = ExtResource("11_3jlun")
+
 [node name="Label" type="Label" parent="." unique_id=1740485618]
+visible = false
 offset_left = 90.0
 offset_top = -14.0
 offset_right = 261.0
@@ -23,5 +74,15 @@ label_settings = SubResource("LabelSettings_7vadr")
 
 [node name="Timer" type="Timer" parent="." unique_id=1190393367]
 wait_time = 5.0
+
+[node name="Little Guy" type="AnimatedSprite2D" parent="." unique_id=624958691]
+position = Vector2(32, 148)
+sprite_frames = SubResource("SpriteFrames_tb2w5")
+frame_progress = 0.620046
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1218610629]
+stream = ExtResource("12_cgbk6")
+pitch_scale = 3.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
