@@ -21,5 +21,5 @@ This game was made in collaboration with Nathan, Finn, Paul and Paul
 It was an entry to the Jame Gam game jam.
 Credits to Towball for music. 
 
-https://aven39.itch.io/stargazing
+https://aven4679.itch.io/stargazing
 (If you are downloading the game, simply unzip the archive and run 'Stargazing.exe')
