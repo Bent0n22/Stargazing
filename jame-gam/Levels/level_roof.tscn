@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://drqso8ilmx4qj" path="res://Assets/Sprites/star background.png" id="1_br5fe"]
 [ext_resource type="Script" uid="uid://dl48ppgxkp38q" path="res://Scripts/level_roof.gd" id="1_g4ix3"]
 [ext_resource type="Script" uid="uid://b70svut8s22b6" path="res://Scripts/canvas_layer.gd" id="2_br5fe"]
+[ext_resource type="Texture2D" uid="uid://c7jgdwmwb4rw4" path="res://Assets/Sprites/star background background.png" id="2_fhmtx"]
+[ext_resource type="Shader" uid="uid://owh7pwbshe8c" path="res://level_roof.gdshader" id="2_n606x"]
 [ext_resource type="Texture2D" uid="uid://nq0ugl14uoqh" path="res://Assets/Sprites/pole.png" id="3_v8fvw"]
 [ext_resource type="Texture2D" uid="uid://br660qykcdkew" path="res://Assets/Sprites/Roof.png" id="4_gyfd2"]
 [ext_resource type="Script" uid="uid://be3n1f8npeku" path="res://Scripts/endingplayer.gd" id="5_ullyh"]
@@ -10,6 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://c8q1s3cdm7b0s" path="res://Elements/trans_trigger_on_interact.tscn" id="8_hm481"]
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://Elements/ui.tscn" id="9_nr7vr"]
 [ext_resource type="AudioStream" uid="uid://b6rx7t12h0vg6" path="res://Assets/Audio/crickets.mp3" id="10_g4ix3"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_7vadr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0p634"]
+shader = ExtResource("2_n606x")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_7vadr")
+shader_parameter/scroll_speed = Vector2(0.1, 0.05)
+shader_parameter/alpha_multiplier = 1.0
 
 [sub_resource type="GDScript" id="GDScript_b1rql"]
 script/source = "extends Sprite2D
@@ -96,7 +106,12 @@ size = Vector2(20, 43)
 [node name="level_ending" type="Node2D" unique_id=1193487933]
 script = ExtResource("1_g4ix3")
 
+[node name="StarBackgroundBackground" type="Sprite2D" parent="." unique_id=169834974]
+position = Vector2(144, -32)
+texture = ExtResource("2_fhmtx")
+
 [node name="StarBackground" type="Sprite2D" parent="." unique_id=1941992241]
+material = SubResource("ShaderMaterial_0p634")
 position = Vector2(144, -32)
 texture = ExtResource("1_br5fe")
 script = SubResource("GDScript_b1rql")
