@@ -31,8 +31,10 @@
 [ext_resource type="Texture2D" uid="uid://utf8ox3c5srq" path="res://Assets/Sprites/CLIMB.png" id="32_khp6g"]
 [ext_resource type="Texture2D" uid="uid://yvjagvu0kupo" path="res://Assets/Sprites/goopsplash.png" id="33_dr1ra"]
 [ext_resource type="Texture2D" uid="uid://cr60tx4qxecly" path="res://Assets/Font/Sign1.png" id="33_jfhgv"]
+[ext_resource type="Texture2D" uid="uid://yihvj4t2ijep" path="res://Assets/Sprites/Pipe/Pipe of Despair5.png" id="34_jfhgv"]
 [ext_resource type="Texture2D" uid="uid://b5f1lkaxmog34" path="res://Assets/Font/Sign4.png" id="34_mv0r0"]
 [ext_resource type="Texture2D" uid="uid://bmnudfopx1md" path="res://Assets/Font/Sign2.png" id="35_1n6sd"]
+[ext_resource type="Texture2D" uid="uid://bb0m71pkpcwpp" path="res://Assets/Sprites/Pipe/Pipe of Despair4.png" id="35_mv0r0"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dr1ra"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -890,3 +892,13 @@ position = Vector2(788, -564)
 rotation = -0.11519173
 energy = 0.1
 shadow_enabled = true
+
+[node name="PipeOfDespair5" type="Sprite2D" parent="." unique_id=728549023]
+position = Vector2(-139, -20)
+scale = Vector2(-1, 1)
+texture = ExtResource("34_jfhgv")
+
+[node name="PipeOfDespair4" type="Sprite2D" parent="." unique_id=1247485348]
+position = Vector2(-139, 51)
+rotation = -1.5707964
+texture = ExtResource("35_mv0r0")

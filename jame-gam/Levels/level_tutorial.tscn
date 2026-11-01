@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://nbtt2kl507va" path="res://Assets/Sprites/Interaction Arrows/interactionarrow1.png" id="34_ny73l"]
 [ext_resource type="Texture2D" uid="uid://d0jc2rbuhht2p" path="res://Assets/Sprites/Interaction Arrows/interactionarrow3.png" id="35_otu32"]
 [ext_resource type="Texture2D" uid="uid://b54pxcaqj43xg" path="res://Assets/Sprites/Pipe/Pipe of Despair3.png" id="36_otu32"]
+[ext_resource type="Texture2D" uid="uid://bb0m71pkpcwpp" path="res://Assets/Sprites/Pipe/Pipe of Despair4.png" id="37_qfym2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sv282"]
 texture = ExtResource("2_6t0p6")
@@ -1023,6 +1024,14 @@ texture = ExtResource("5_ppjyf")
 z_index = 2
 position = Vector2(912, -472)
 texture = ExtResource("36_otu32")
+
+[node name="PipeOfDespair4" type="Sprite2D" parent="." unique_id=1787343515]
+position = Vector2(992, -472)
+texture = ExtResource("37_qfym2")
+
+[node name="PipeOfDespair5" type="Sprite2D" parent="." unique_id=244547934]
+position = Vector2(1056, -472)
+texture = ExtResource("37_qfym2")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=1987245037]
 position = Vector2(788, -564)
