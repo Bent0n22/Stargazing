@@ -6,6 +6,7 @@ func _ready() -> void:
 	$AudioStreamPlayer.play()
 	$CanvasLayer/AnimatedSprite2D.play("default")
 	$CanvasLayer/AnimatedSprite2D2.play("default")
+	
 	match star_num:
 		1:
 			label.text = "For beating the game, you have earned a star! There are 5 to collect, so keep reaching for the stars!"

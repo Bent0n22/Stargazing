@@ -47,6 +47,9 @@ func _process(_delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	GameController.stars.one = true
+	if !GameController.has_died_gruesomely:
+		GameController.stars.three = true
+	GameController.has_died_gruesomely = false
 	if GameController.time <= 400:
 		GameController.stars.two = true
 	GameController.game_won = true

@@ -6,6 +6,36 @@ extends Control
 @onready var Star4 = $"CanvasLayer2/Star 4"
 @onready var Star5 = $"CanvasLayer2/Star 5"
 
+var popup_code = preload("res://Transitioning Stuff/you_got_a_star.tscn")
+func _ready() -> void:
+	if !GameController.has_prompted_for_star.one and GameController.stars.one:
+		var popup = popup_code.instantiate()
+		popup.star_num = 1
+		get_tree().get_current_scene().add_child(popup)
+	
+	if !GameController.has_prompted_for_star.two and GameController.stars.two:
+		var popup = popup_code.instantiate()
+		popup.star_num = 2
+		get_tree().get_current_scene().add_child(popup)
+	
+	if !GameController.has_prompted_for_star.three and GameController.stars.three:
+		var popup = popup_code.instantiate()
+		popup.star_num = 3
+		get_tree().get_current_scene().add_child(popup)
+	
+	if !GameController.has_prompted_for_star.four and GameController.stars.four:
+		var popup = popup_code.instantiate()
+		popup.star_num = 4
+		get_tree().get_current_scene().add_child(popup)
+	
+	if GameController.stars.one and GameController.stars.two and GameController.stars.three and GameController.stars.four:
+		GameController.stars.five = true
+	
+	if !GameController.has_prompted_for_star.five and GameController.stars.five:
+		var popup = popup_code.instantiate()
+		popup.star_num = 5
+		get_tree().get_current_scene().add_child(popup)
+
 func _on_play_game_pressed() -> void:
 	SceneLoaderScene.transition_to_scene(GameController.tempVars.room)
 	GameController.game_start = true

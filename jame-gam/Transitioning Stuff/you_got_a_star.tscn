@@ -64,7 +64,7 @@ libraries/ = SubResource("AnimationLibrary_5q7e5")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=57020047]
 position = Vector2(160, 91)
 sprite_frames = SubResource("SpriteFrames_tb2w5")
-frame_progress = 0.36662984
+frame_progress = 0.4779335
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1081701773]
 offset_left = 122.0
@@ -86,7 +86,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="StarDrawing" type="Sprite2D" parent="CanvasLayer" unique_id=912287834]
-position = Vector2(160, 135)
+position = Vector2(160, 140)
 texture = ExtResource("6_5q7e5")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=712777968]
@@ -95,4 +95,5 @@ sprite_frames = SubResource("SpriteFrames_v8ptl")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1304965485]
 stream = ExtResource("7_n0rpy")
+volume_db = -8.0
 pitch_scale = 0.75

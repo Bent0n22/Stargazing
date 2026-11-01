@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="2_4hy44"]
 [ext_resource type="Texture2D" uid="uid://ba0tji80446ir" path="res://Assets/Sprites/Title.png" id="2_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://c4yv5ey61jn5o" path="res://Assets/Sprites/StarDrawing.png" id="3_iqepy"]
+[ext_resource type="Texture2D" uid="uid://cvf5lv3sn6alw" path="res://Assets/Sprites/StarDrawing2.png" id="3_w25hu"]
 [ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://c5bg2ffxnmffh" path="res://Assets/Sprites/Trophies/Trophy5.png" id="4_5h80m"]
 [ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
@@ -35,6 +36,46 @@ script = ExtResource("1_4hy44")
 position = Vector2(160, 90)
 texture = ExtResource("2_kk3ma")
 
+[node name="StarDrawing4" type="Sprite2D" parent="CanvasLayer2" unique_id=741089491]
+position = Vector2(275, 169)
+texture = ExtResource("3_w25hu")
+
+[node name="Trophy2" type="Sprite2D" parent="CanvasLayer2" unique_id=1590485863]
+position = Vector2(275, 150)
+texture = ExtResource("6_td6mg")
+
+[node name="StarDrawing2" type="Sprite2D" parent="CanvasLayer2" unique_id=974013189]
+position = Vector2(241, 169)
+texture = ExtResource("3_w25hu")
+
+[node name="Trophy1" type="Sprite2D" parent="CanvasLayer2/StarDrawing2" unique_id=366245516]
+position = Vector2(17, -19)
+texture = ExtResource("7_guify")
+
+[node name="StarDrawing3" type="Sprite2D" parent="CanvasLayer2" unique_id=1778805684]
+position = Vector2(258, 169)
+texture = ExtResource("3_w25hu")
+
+[node name="Trophy3" type="Sprite2D" parent="CanvasLayer2/StarDrawing3" unique_id=1244764702]
+position = Vector2(-17, -19)
+texture = ExtResource("8_oil5j")
+
+[node name="StarDrawing5" type="Sprite2D" parent="CanvasLayer2" unique_id=1619004567]
+position = Vector2(292, 169)
+texture = ExtResource("3_w25hu")
+
+[node name="Trophy4" type="Sprite2D" parent="CanvasLayer2/StarDrawing5" unique_id=1043375780]
+position = Vector2(-1, -19)
+texture = ExtResource("5_w25hu")
+
+[node name="StarDrawing6" type="Sprite2D" parent="CanvasLayer2" unique_id=434815263]
+position = Vector2(309, 169)
+texture = ExtResource("3_w25hu")
+
+[node name="Trophy5" type="Sprite2D" parent="CanvasLayer2/StarDrawing6" unique_id=1054623898]
+position = Vector2(0, -18)
+texture = ExtResource("4_5h80m")
+
 [node name="Star 5" type="TextureButton" parent="CanvasLayer2" unique_id=792251152]
 offset_left = 301.0
 offset_top = 161.0
@@ -45,10 +86,6 @@ texture_pressed = ExtResource("3_iqepy")
 texture_hover = ExtResource("3_iqepy")
 texture_disabled = ExtResource("3_iqepy")
 texture_focused = ExtResource("3_iqepy")
-
-[node name="Trophy5" type="Sprite2D" parent="CanvasLayer2/Star 5" unique_id=1054623898]
-position = Vector2(8, -10)
-texture = ExtResource("4_5h80m")
 
 [node name="Star 4" type="TextureButton" parent="CanvasLayer2" unique_id=1736776985]
 offset_left = 284.0
@@ -61,10 +98,6 @@ texture_hover = ExtResource("3_iqepy")
 texture_disabled = ExtResource("3_iqepy")
 texture_focused = ExtResource("3_iqepy")
 
-[node name="Trophy4" type="Sprite2D" parent="CanvasLayer2/Star 4" unique_id=1043375780]
-position = Vector2(7, -11)
-texture = ExtResource("5_w25hu")
-
 [node name="Star 3" type="TextureButton" parent="CanvasLayer2" unique_id=1658745120]
 offset_left = 267.0
 offset_top = 161.0
@@ -75,10 +108,6 @@ texture_pressed = ExtResource("3_iqepy")
 texture_hover = ExtResource("3_iqepy")
 texture_disabled = ExtResource("3_iqepy")
 texture_focused = ExtResource("3_iqepy")
-
-[node name="Trophy2" type="Sprite2D" parent="CanvasLayer2/Star 3" unique_id=1590485863]
-position = Vector2(8, -11)
-texture = ExtResource("6_td6mg")
 
 [node name="Star 2" type="TextureButton" parent="CanvasLayer2" unique_id=1154786608]
 offset_left = 250.0
@@ -91,10 +120,6 @@ texture_hover = ExtResource("3_iqepy")
 texture_disabled = ExtResource("3_iqepy")
 texture_focused = ExtResource("3_iqepy")
 
-[node name="Trophy1" type="Sprite2D" parent="CanvasLayer2/Star 2" unique_id=366245516]
-position = Vector2(8, -11)
-texture = ExtResource("7_guify")
-
 [node name="Star 1" type="TextureButton" parent="CanvasLayer2" unique_id=898574127]
 offset_left = 233.0
 offset_top = 161.0
@@ -105,10 +130,6 @@ texture_pressed = ExtResource("3_iqepy")
 texture_hover = ExtResource("3_iqepy")
 texture_disabled = ExtResource("3_iqepy")
 texture_focused = ExtResource("3_iqepy")
-
-[node name="Trophy3" type="Sprite2D" parent="CanvasLayer2/Star 1" unique_id=1244764702]
-position = Vector2(8, -11)
-texture = ExtResource("8_oil5j")
 
 [node name="I Star" type="TextureButton" parent="CanvasLayer2" unique_id=1428939544]
 offset_left = 243.0
