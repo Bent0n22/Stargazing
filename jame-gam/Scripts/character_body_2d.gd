@@ -71,4 +71,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	#Menu Esc
+	if Input.is_action_just_pressed("Back"):
+		SceneLoaderScene.transition_to_scene("res://options.tscn")
+
 	move_and_slide()

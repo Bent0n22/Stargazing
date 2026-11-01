@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_ytr4m"]
 [ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://brs4f4j72hpyu" path="res://Assets/Sprites/Menu Buttons/Play Button8.png" id="7_dwrpx"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://bty42hsnkxicd" path="res://Assets/Sprites/Menu Buttons/Play Button10.png" id="8_jspdm"]
 [ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/menu.mp3" id="9_nrnbx"]
+[ext_resource type="Texture2D" uid="uid://dtjn64pocwqt7" path="res://Assets/Sprites/Menu Buttons/Play Button12.png" id="9_oxnod"]
 [ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="11_h1wq0"]
 
 [node name="Menu" type="Control" unique_id=470638115]
@@ -55,11 +58,20 @@ texture_normal = ExtResource("1_mae5d")
 texture_pressed = ExtResource("3_ytr4m")
 texture_hover = ExtResource("5_kk3ma")
 
+[node name="Options" type="TextureButton" parent="CanvasLayer" unique_id=1192978181]
+offset_left = 128.0
+offset_top = 97.0
+offset_right = 192.0
+offset_bottom = 129.0
+texture_normal = ExtResource("7_dwrpx")
+texture_pressed = ExtResource("8_jspdm")
+texture_hover = ExtResource("9_oxnod")
+
 [node name="Exit Game" type="TextureButton" parent="CanvasLayer" unique_id=1316716114]
 offset_left = 128.0
-offset_top = 98.0
+offset_top = 117.0
 offset_right = 192.0
-offset_bottom = 138.0
+offset_bottom = 157.0
 texture_normal = ExtResource("2_4hy44")
 texture_pressed = ExtResource("6_ecwwl")
 texture_hover = ExtResource("7_kk3ma")
@@ -76,4 +88,5 @@ volume_db = -7.26
 [connection signal="pressed" from="CanvasLayer2/TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/TextureButton2" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Play Game" to="." method="_on_play_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit Game" to="." method="_on_exit_game_pressed"]

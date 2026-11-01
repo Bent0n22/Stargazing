@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cts4kmjmxxpxu"]
+
+[ext_resource type="Script" uid="uid://ceo4jepxqn778" path="res://options.gd" id="1_5v8ap"]
+[ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="2_ao2gm"]
+[ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/menu.mp3" id="2_se8ut"]
+[ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="3_p8250"]
+[ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="4_kls10"]
+[ext_resource type="Texture2D" uid="uid://inqg0jivc4d6" path="res://Assets/Sprites/Menu Buttons/Play Button7.png" id="6_w5qgn"]
+[ext_resource type="Texture2D" uid="uid://bokpskx00mopk" path="res://Assets/Sprites/Menu Buttons/Play Button9.png" id="7_vmi34"]
+[ext_resource type="Texture2D" uid="uid://bp80cyr7kul3u" path="res://Assets/Sprites/Menu Buttons/Play Button11.png" id="8_o5iem"]
+
+[node name="Options" type="Control" unique_id=883080698]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5v8ap")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1346866795]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=206069123]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=620735758]
+layout_mode = 2
+text = "volume"
+
+[node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=19461960]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+
+[node name="mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=685605605]
+layout_mode = 2
+text = "Mute"
+
+[node name="fullscreen" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=1968774003]
+layout_mode = 2
+button_pressed = true
+text = "Fullscreen"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=648931193]
+stream = ExtResource("2_se8ut")
+volume_db = -8.0
+autoplay = true
+
+[node name="Exit Game" type="TextureButton" parent="." unique_id=1477570968]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 155.0
+offset_right = 320.0
+offset_bottom = 195.0
+texture_normal = ExtResource("3_p8250")
+texture_pressed = ExtResource("4_kls10")
+texture_hover = ExtResource("2_ao2gm")
+
+[node name="Menu Button" type="TextureButton" parent="." unique_id=750077451]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 117.0
+offset_right = 320.0
+offset_bottom = 157.0
+texture_normal = ExtResource("6_w5qgn")
+texture_pressed = ExtResource("7_vmi34")
+texture_hover = ExtResource("8_o5iem")
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/mute" to="." method="_on_mute_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="Exit Game" to="." method="_on_exit_game_pressed"]
+[connection signal="pressed" from="Menu Button" to="." method="_on_menu_button_pressed"]
