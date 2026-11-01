@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://03eutyle7645" path="res://Assets/Sprites/Z Key/ZKeyBruv2.png" id="3_jtwne"]
 [ext_resource type="Texture2D" uid="uid://oxi3y3blxwmd" path="res://Assets/Sprites/Little Guy/stargazingexit3.png" id="4_3j5cw"]
 [ext_resource type="Texture2D" uid="uid://f2k0hbq4kj03" path="res://Assets/Sprites/Little Guy/stargazingexit4.png" id="5_jtwne"]
+[ext_resource type="Texture2D" uid="uid://inqg0jivc4d6" path="res://Assets/Sprites/Menu Buttons/Play Button7.png" id="5_tgbvw"]
+[ext_resource type="Texture2D" uid="uid://bokpskx00mopk" path="res://Assets/Sprites/Menu Buttons/Play Button9.png" id="6_5m4sw"]
 [ext_resource type="Texture2D" uid="uid://21wuu5hd1l8f" path="res://Assets/Sprites/Little Guy/stargazingexit5.png" id="6_54x8p"]
 [ext_resource type="Texture2D" uid="uid://b1sjif3kvpbv0" path="res://Assets/Sprites/Little Guy/stargazingexit6.png" id="7_bpnjc"]
+[ext_resource type="Texture2D" uid="uid://bp80cyr7kul3u" path="res://Assets/Sprites/Menu Buttons/Play Button11.png" id="7_yv312"]
 [ext_resource type="Texture2D" uid="uid://ca6vsc85yh3gk" path="res://Assets/Sprites/Little Guy/stargazingexit7.png" id="8_8rbqn"]
 [ext_resource type="Texture2D" uid="uid://dciwowlh33jnb" path="res://Assets/Sprites/Little Guy/stargazingexit8.png" id="9_h83ux"]
 [ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="12_jtwne"]
@@ -279,14 +282,6 @@ sprite_frames = SubResource("SpriteFrames_v8ptl")
 autoplay = "default"
 frame_progress = 0.03681439
 
-[node name="Button" type="Button" parent="CanvasLayer/Credits" unique_id=1084326873]
-offset_left = 194.0
-offset_top = 86.0
-offset_right = 242.0
-offset_bottom = 110.0
-theme_override_fonts/font = ExtResource("12_jtwne")
-text = "Menu"
-
 [node name="Label4" type="Label" parent="CanvasLayer/Credits" unique_id=582455238]
 offset_left = 149.0
 offset_top = 139.0
@@ -296,6 +291,15 @@ theme_override_fonts/font = ExtResource("12_jtwne")
 text = "Your time was "
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Credits" unique_id=902322508]
+offset_left = 191.0
+offset_top = 80.0
+offset_right = 255.0
+offset_bottom = 120.0
+texture_normal = ExtResource("5_tgbvw")
+texture_pressed = ExtResource("6_5m4sw")
+texture_hover = ExtResource("7_yv312")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=782999637]
 sprite_frames = SubResource("SpriteFrames_tb2w5")
@@ -385,4 +389,4 @@ stream = ExtResource("13_54x8p")
 volume_db = -8.0
 autoplay = true
 
-[connection signal="pressed" from="CanvasLayer/Credits/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Credits/TextureButton" to="." method="_on_texture_button_pressed"]
