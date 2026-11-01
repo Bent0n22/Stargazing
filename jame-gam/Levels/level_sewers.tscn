@@ -27,7 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://didxosfixk8im" path="res://Assets/Sprites/Pipe/Pipe of Despair1.png" id="24_2ddu0"]
 [ext_resource type="Script" uid="uid://cmwrsnavnfc4m" path="res://Scripts/bee.gd" id="26_3yo0i"]
 [ext_resource type="Texture2D" uid="uid://c3n8qe07teobl" path="res://Assets/Sprites/Fly.png" id="27_dtgt0"]
-[ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="28_gjh0q"]
+[ext_resource type="AudioStream" uid="uid://c32040o4wyw4a" path="res://Assets/Audio/freesound_community-180526-bee-buzzing-away-isolated-event-toronto-94455.mp3" id="28_jfhgv"]
 [ext_resource type="Texture2D" uid="uid://cx14bx8bubj1t" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff4.png" id="29_dtgt0"]
 [ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="30_txrau"]
 [ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="31_khp6g"]
@@ -184,12 +184,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_txrau"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mv0r0"]
 size = Vector2(12, 8)
 
-[sub_resource type="Curve2D" id="Curve2D_khp6g"]
+[sub_resource type="Curve2D" id="Curve2D_v5qog"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, -70, 0, 0, 0, 0, -70, 0, 0, 0, 0, 0, 0, 70, 0, 0, 0, 0, 70, 0, 0, 0, 0, 0, 0, -70)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -42, -41, 0, 0, 0, 0, 1, -79, 0, 0, 0, 0, 44, -38, 0, 0, -14.015, 116.25, 0, 0)
 }
 point_count = 5
 
@@ -876,8 +876,8 @@ position = Vector2(33, -208)
 [node name="Fly3" parent="Flys" unique_id=1151669773 instance=ExtResource("8_5i12g")]
 position = Vector2(-231, -302)
 
-[node name="Fly4" type="Node2D" parent="Flys" unique_id=1367491907]
-position = Vector2(568, -319)
+[node name="Fly4" type="Node2D" parent="Flys" unique_id=1135977657]
+position = Vector2(574, -314)
 script = ExtResource("26_3yo0i")
 time_to_complete_path = 2.0
 rotates = true
@@ -886,27 +886,24 @@ rotates = true
 rotation = -0.0013465881
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Flys/Fly4/AnimatableBody2D" unique_id=986786680]
-position = Vector2(5.9771028, 17.008064)
 sprite_frames = SubResource("SpriteFrames_6cv6t")
 autoplay = "default"
 
-[node name="killzone" parent="Flys/Fly4/AnimatableBody2D" unique_id=28675326 instance=ExtResource("13_8cmjj")]
+[node name="killzone" parent="Flys/Fly4/AnimatableBody2D" unique_id=953273365 instance=ExtResource("13_8cmjj")]
 rotation = 0.0013465881
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Flys/Fly4/AnimatableBody2D/killzone" unique_id=1890019426]
-stream = ExtResource("28_gjh0q")
+stream = ExtResource("28_jfhgv")
+pitch_scale = 2.4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flys/Fly4/AnimatableBody2D/killzone" unique_id=1460873058]
-position = Vector2(6, 17)
-shape = SubResource("RectangleShape2D_txrau")
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_mv0r0")
 
 [node name="Path" type="Path2D" parent="Flys/Fly4" unique_id=496989683]
-position = Vector2(6, -37.000008)
-scale = Vector2(0.76428574, 0.7714286)
-curve = SubResource("Curve2D_khp6g")
+curve = SubResource("Curve2D_v5qog")
 
 [node name="Follow" type="PathFollow2D" parent="Flys/Fly4/Path" unique_id=1661702296]
-position = Vector2(0, -70)
 rotation = 1.072439
 rotates = false
 
