@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/menu.mp3" id="9_nrnbx"]
 [ext_resource type="Texture2D" uid="uid://dtjn64pocwqt7" path="res://Assets/Sprites/Menu Buttons/Play Button12.png" id="9_oxnod"]
 [ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="11_h1wq0"]
+[ext_resource type="AudioStream" uid="uid://cpe5ulutw2nir" path="res://Assets/Audio/splash.mp3" id="21_td6mg"]
 
 [node name="Menu" type="Control" unique_id=470638115]
 layout_mode = 3
@@ -137,6 +138,12 @@ offset_top = 29.0
 offset_right = 252.0
 offset_bottom = 38.0
 
+[node name="Super Star" type="TextureButton" parent="CanvasLayer2" unique_id=1823312213]
+offset_left = 54.0
+offset_top = 81.0
+offset_right = 59.0
+offset_bottom = 85.0
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=117266955]
 
 [node name="Play Game" type="TextureButton" parent="CanvasLayer" unique_id=760700457]
@@ -175,12 +182,21 @@ autoplay = true
 stream = ExtResource("11_h1wq0")
 volume_db = -7.26
 
+[node name="Actual Click OMG" type="AudioStreamPlayer2D" parent="." unique_id=1860707536]
+stream = ExtResource("11_h1wq0")
+pitch_scale = 10.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="." unique_id=233710576]
+stream = ExtResource("21_td6mg")
+pitch_scale = 1.5
+
 [connection signal="pressed" from="CanvasLayer2/Star 5" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Star 4" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Star 3" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Star 2" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/Star 1" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer2/I Star" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Super Star" to="." method="_on_super_star_pressed"]
 [connection signal="pressed" from="CanvasLayer/Play Game" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit Game" to="." method="_on_exit_game_pressed"]

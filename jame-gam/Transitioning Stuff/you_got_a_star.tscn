@@ -61,10 +61,15 @@ libraries/ = SubResource("AnimationLibrary_5q7e5")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1178953715]
 
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1107030641]
+offset_right = 320.0
+offset_bottom = 180.0
+color = Color(0, 0, 0, 1)
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=57020047]
 position = Vector2(160, 91)
 sprite_frames = SubResource("SpriteFrames_tb2w5")
-frame_progress = 0.4779335
+frame_progress = 0.15402876
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=1081701773]
 offset_left = 122.0

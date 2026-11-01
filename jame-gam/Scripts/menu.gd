@@ -37,13 +37,16 @@ func _ready() -> void:
 		get_tree().get_current_scene().add_child(popup)
 
 func _on_play_game_pressed() -> void:
+	$"Actual Click OMG".play()
 	SceneLoaderScene.transition_to_scene(GameController.tempVars.room)
 	GameController.game_start = true
 
 func _on_options_pressed() -> void:
+	$"Actual Click OMG".play()
 	SceneLoaderScene.transition_to_scene("options.tscn")
 
 func _on_exit_game_pressed() -> void:
+	$"Actual Click OMG".play()
 	get_tree().quit()
 
 func _process(_delta: float) -> void:
@@ -82,4 +85,9 @@ func _process(_delta: float) -> void:
 
 func _on_texture_button_pressed() -> void:
 	$AudioStreamPlayer2D.play()
+	pass # Replace with function body.
+
+
+func _on_super_star_pressed() -> void:
+	$"AudioStreamPlayer2D2".play(0.25)
 	pass # Replace with function body.
