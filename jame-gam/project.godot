@@ -30,6 +30,7 @@ GameController="*res://Autoloads/GameController.gd"
 SaveController="*res://Autoloads/SaveController.gd"
 DialogManager="*uid://by05rp22xav3h"
 SceneLoaderScene="*uid://btbm0ukseyajx"
+GlobalSettings="*uid://d2hrpwsv5ywbr"
 
 [display]
 
