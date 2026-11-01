@@ -34,9 +34,19 @@
 [ext_resource type="Texture2D" uid="uid://b5f1lkaxmog34" path="res://Assets/Font/Sign4.png" id="34_mv0r0"]
 [ext_resource type="Texture2D" uid="uid://bmnudfopx1md" path="res://Assets/Font/Sign2.png" id="35_1n6sd"]
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dr1ra"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bt0lu"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_jfhgv"]
+polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
 texture = ExtResource("1_ic1cm")
 6:1/0 = 0
+6:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dr1ra")
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:1/0 = 0
 4:2/animation_columns = 2
@@ -44,12 +54,16 @@ texture = ExtResource("1_ic1cm")
 4:2/animation_frame_1/duration = 1.0
 4:2/0 = 0
 6:2/0 = 0
+6:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dr1ra")
 6:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:2/0 = 0
+7:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dr1ra")
 7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:2/0 = 0
+8:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_dr1ra")
 8:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:2/0 = 0
+9:2/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_jfhgv")
 9:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 2.8777409, -8, 2.8777409)
 10:2/0 = 0
 4:3/animation_columns = 2
@@ -63,6 +77,7 @@ texture = ExtResource("1_ic1cm")
 8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 9:5/0 = 0
 9:1/0 = 0
+9:1/0/occlusion_layer_0/polygon_0/polygon = SubResource("OccluderPolygon2D_bt0lu")
 9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:3/0 = 0
 7:4/0 = 0
@@ -72,6 +87,7 @@ texture = ExtResource("1_ic1cm")
 8:3/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7vadr"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vlg1b")
 
@@ -868,3 +884,9 @@ texture = ExtResource("33_dr1ra")
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_s1xjb")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=710959175]
+position = Vector2(788, -564)
+rotation = -0.11519173
+energy = 0.1
+shadow_enabled = true
