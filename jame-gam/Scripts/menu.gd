@@ -11,7 +11,6 @@ var popup_code = preload("res://Transitioning Stuff/you_got_a_star.tscn")
 func _ready() -> void:
 	GameController.tempTime = GameController.time
 	GameController.game_start = false
-	GameController.menu_instance.queue_free()
 	GameController.menu_instance = null
 
 func _on_play_game_pressed() -> void:
