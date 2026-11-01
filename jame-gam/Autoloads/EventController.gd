@@ -4,7 +4,6 @@ const PAUSE_MENU = preload("res://pause_menu.tscn")
 
 func _process(_delta: float) -> void:
 	print(get_tree().current_scene)
-	get_tree().current_scene.paused = true
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("Back") && (get_tree().current_scene.scene_file_path == ("res://Levels/level_tutorial.tscn") or 
