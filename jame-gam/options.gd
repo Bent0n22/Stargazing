@@ -28,6 +28,8 @@ func _on_fullscreen_toggled(toggled_on: bool) -> void:
 
 func _on_menu_pressed() -> void:
 	SceneLoaderScene.transition_to_scene("res://menu.tscn")
+	GameController.menu_instance.queue_free()
+	GameController.menu_instance = null
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
