@@ -17,6 +17,9 @@ func _ready() -> void:
 	speedrun_timer.button_pressed = GlobalSettings.speedrun_timer_is_checked
 	if get_tree().current_scene.scene_file_path == ("res://menu.tscn"):
 		$"../menu".disabled = true
+		$"../menu".visible = false
+		$"../back".position.y = 121.0
+		$"../back".size.y = 24.0
 func _on_volume_value_changed(new_value: float) -> void:
 	GlobalSettings.volume_value = new_value
 	AudioServer.set_bus_volume_db(0,linear_to_db(new_value))
