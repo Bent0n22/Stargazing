@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 		little_guy_ragdoll.global_position = body.global_position
 		little_guy_ragdoll.get_node("RigidBody2D").linear_velocity = body.velocity
 		if round(body.velocity.x) == 0:
-			little_guy_ragdoll.get_node("RigidBody2D").add_constant_torque(100)
+			little_guy_ragdoll.get_node("RigidBody2D").angular_velocity = 10
 			little_guy_ragdoll.get_node("RigidBody2D").scale.x = 1
 		if get_tree().current_scene.scene_file_path == "res://Levels/level_waterspout.tscn":
 			var level_camera = little_guy_ragdoll.find_child("Camera2D")

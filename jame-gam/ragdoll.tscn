@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="1_s1edl"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tb2w5"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s1edl"]
 radius = 3.0
 height = 18.0
 
@@ -27,9 +27,11 @@ animations = [{
 limit_bottom = 62
 
 [node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1929042738]
+inertia = 33.05
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=801605783]
-shape = SubResource("CapsuleShape2D_tb2w5")
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_s1edl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D" unique_id=827358301]
 sprite_frames = SubResource("SpriteFrames_tb2w5")
