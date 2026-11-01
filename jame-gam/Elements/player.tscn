@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cgbk6"]
-radius = 4.5
+radius = 5.0
 height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
@@ -68,7 +68,7 @@ animations = [{
 script = ExtResource("1_0e48y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=188208629]
-position = Vector2(0.5, 1)
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_cgbk6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1212077977]

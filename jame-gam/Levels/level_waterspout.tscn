@@ -218,7 +218,6 @@ stream = SubResource("AudioStreamMP3_2ua47")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1315915006]
 stream = ExtResource("13_b5q0m")
 volume_db = -9.905
-autoplay = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1994185634]
 

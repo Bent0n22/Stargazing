@@ -9,7 +9,6 @@ var grate5 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate5.png")
 var grate6 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate6.png")
 
 func _ready() -> void:
-	print(GameController.time_into_music)
 	$AudioStreamPlayer.play(GameController.time_into_music)
 	GameController.time_into_music = 0
 	GameController.tempVars.room = "res://Levels/level_sewers.tscn"
