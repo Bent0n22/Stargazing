@@ -21,7 +21,6 @@ func _on_play_game_pressed() -> void:
 	GameController.game_start = true
 
 func _on_options_pressed() -> void:
-	$"CanvasLayer/Options".disabled = true
 	$"Actual Click OMG".play()
 	options.visible = !options.visible
 
