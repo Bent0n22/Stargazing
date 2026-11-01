@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://cts4kmjmxxpxu" path="res://options.tscn" id="22_guify"]
 
 [node name="Menu" type="Control" unique_id=470638115]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -175,6 +176,7 @@ texture_pressed = ExtResource("6_ecwwl")
 texture_hover = ExtResource("7_kk3ma")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=818988344]
+process_mode = 3
 stream = ExtResource("9_nrnbx")
 volume_db = -8.241
 autoplay = true

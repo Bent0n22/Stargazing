@@ -906,6 +906,7 @@ linesagain = Array[String](["You made it!", "I was so excited for you to come ov
 custompos = Vector2(505, -365)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=958575022]
+process_mode = 3
 stream = ExtResource("27_kf7vc")
 volume_db = -8.0
 autoplay = true

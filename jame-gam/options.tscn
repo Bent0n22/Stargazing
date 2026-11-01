@@ -5,6 +5,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_3qleb"]
 font = ExtResource("2_vmi34")
+font_size = 19
 
 [node name="options" type="CanvasLayer" unique_id=430517284]
 layer = 6
@@ -32,6 +33,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 3.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -40,7 +43,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="Options/MarginContainer/VBoxContainer" unique_id=620735758]
 layout_mode = 2
-text = "volume"
+text = "  volume"
 label_settings = SubResource("LabelSettings_3qleb")
 
 [node name="volume" type="HSlider" parent="Options/MarginContainer/VBoxContainer" unique_id=19461960]
@@ -50,19 +53,27 @@ step = 0.001
 
 [node name="mute" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=685605605]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vmi34")
+theme_override_font_sizes/font_size = 19
 text = "Mute"
 
 [node name="fullscreen" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1968774003]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vmi34")
+theme_override_font_sizes/font_size = 19
 button_pressed = true
 text = "Fullscreen"
 
 [node name="death counter" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1102480532]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vmi34")
+theme_override_font_sizes/font_size = 19
 text = "Death Counter"
 
 [node name="speedrun timer" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1913343487]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_vmi34")
+theme_override_font_sizes/font_size = 19
 text = "Speedrun Timer"
 
 [node name="menu" type="Button" parent="." unique_id=754078220]
@@ -96,8 +107,8 @@ text = "back"
 [connection signal="toggled" from="Options/MarginContainer/VBoxContainer/fullscreen" to="Options" method="_on_fullscreen_toggled"]
 [connection signal="toggled" from="Options/MarginContainer/VBoxContainer/death counter" to="Options" method="_on_death_counter_toggled"]
 [connection signal="toggled" from="Options/MarginContainer/VBoxContainer/speedrun timer" to="Options" method="_on_speedrun_timer_toggled"]
-[connection signal="pressed" from="menu" to="Options" method="_on_menu_pressed"]
 [connection signal="pressed" from="menu" to="Options" method="_on_button_pressed"]
-[connection signal="pressed" from="quit" to="Options" method="_on_quit_pressed"]
+[connection signal="pressed" from="menu" to="Options" method="_on_menu_pressed"]
 [connection signal="pressed" from="quit" to="Options" method="_on_button_2_pressed"]
+[connection signal="pressed" from="quit" to="Options" method="_on_quit_pressed"]
 [connection signal="pressed" from="back" to="Options" method="_on_back_pressed"]

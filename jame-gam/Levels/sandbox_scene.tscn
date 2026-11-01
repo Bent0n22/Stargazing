@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bi8ngsfl1xft5" path="res://Elements/estrana_diaglogue.tscn" id="8_y6xub"]
 [ext_resource type="PackedScene" uid="uid://cnbclwqtfom2l" path="res://Elements/granma_death.tscn" id="11_3qn2e"]
 [ext_resource type="PackedScene" uid="uid://d1ry6o0iuxkof" path="res://Elements/key.tscn" id="11_tsa2i"]
+[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="12_nubcr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tb2w5"]
 size = Vector2(371.5, 20)
@@ -161,5 +162,15 @@ position = Vector2(-109, 33)
 
 [node name="Key" parent="." unique_id=1957883347 instance=ExtResource("11_tsa2i")]
 position = Vector2(28, -5)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1468589342]
+offset_left = -52.982468
+offset_top = -131.0
+offset_right = 15.0
+offset_bottom = -92.06937
+theme_override_fonts/normal_font = ExtResource("12_nubcr")
+theme_override_font_sizes/normal_font_size = 39
+bbcode_enabled = true
+text = "[rainbow freq=1.2 sat=10 val=20]epic[/rainbow]"
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]

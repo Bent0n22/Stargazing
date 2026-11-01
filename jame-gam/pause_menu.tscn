@@ -56,23 +56,23 @@ texture_normal = ExtResource("2_ub45p")
 texture_pressed = ExtResource("3_42xcf")
 texture_hover = ExtResource("4_1meuf")
 
-[node name="Menu Button" type="TextureButton" parent="Play Game" unique_id=1832461687]
+[node name="Options" type="TextureButton" parent="Play Game" unique_id=1362647635]
 layout_mode = 0
 offset_top = 21.0
 offset_right = 64.0
-offset_bottom = 61.0
-texture_normal = ExtResource("2_e8sti")
-texture_pressed = ExtResource("3_q2yj1")
-texture_hover = ExtResource("4_a32ks")
-
-[node name="Options" type="TextureButton" parent="Play Game" unique_id=1362647635]
-layout_mode = 0
-offset_top = 42.0
-offset_right = 64.0
-offset_bottom = 74.0
+offset_bottom = 53.0
 texture_normal = ExtResource("5_a32ks")
 texture_pressed = ExtResource("6_g7dbl")
 texture_hover = ExtResource("7_lv42l")
+
+[node name="Menu Button" type="TextureButton" parent="Play Game" unique_id=1832461687]
+layout_mode = 0
+offset_top = 42.0
+offset_right = 64.0
+offset_bottom = 82.0
+texture_normal = ExtResource("2_e8sti")
+texture_pressed = ExtResource("3_q2yj1")
+texture_hover = ExtResource("4_a32ks")
 
 [node name="Exit Game" type="TextureButton" parent="Play Game" unique_id=1639084339]
 layout_mode = 0
@@ -87,6 +87,6 @@ texture_hover = ExtResource("7_ub45p")
 visible = false
 
 [connection signal="pressed" from="Play Game" to="Control" method="_on_play_game_pressed"]
-[connection signal="pressed" from="Play Game/Menu Button" to="Control" method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Play Game/Options" to="Control" method="_on_options_pressed"]
+[connection signal="pressed" from="Play Game/Menu Button" to="Control" method="_on_menu_button_pressed"]
 [connection signal="pressed" from="Play Game/Exit Game" to="Control" method="_on_exit_game_pressed"]

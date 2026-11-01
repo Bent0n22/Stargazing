@@ -3,10 +3,12 @@ extends Control
 @onready var options: CanvasLayer = $"../options"
 
 func _on_play_game_pressed() -> void:
+	get_tree().paused = false
 	GameController.menu_instance.queue_free()
 	GameController.menu_instance = null
 
 func _on_menu_button_pressed() -> void:
+	get_tree().paused = false
 	SceneLoaderScene.transition_to_scene("res://menu.tscn")
 	GameController.menu_instance.queue_free()
 	GameController.menu_instance = null

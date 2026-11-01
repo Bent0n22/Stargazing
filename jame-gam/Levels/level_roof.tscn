@@ -141,6 +141,7 @@ position = Vector2(271, -63)
 file_to = "res://Levels/credits_and_end_card.tscn"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1444178346]
+process_mode = 3
 stream = ExtResource("10_g4ix3")
 volume_db = -9.123
 autoplay = true
