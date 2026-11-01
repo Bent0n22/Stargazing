@@ -45,7 +45,8 @@ func _process(_delta: float) -> void:
 	pass
 
 
-func _on_button_pressed() -> void:
+func _on_texture_button_pressed() -> void:
+	$CanvasLayer/Credits/TextureButton.disabled = true
 	GameController.stars.one = true
 	if GameController.has_died_gruesomely == 0:
 		GameController.stars.three = true
