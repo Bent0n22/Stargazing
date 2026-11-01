@@ -23,10 +23,10 @@ func _process(delta: float) -> void:
 			start_timer = true
 			att_elapsed += 0.5
 	else:
-		if time_accumlator >= 0.75 / (1 + att_elapsed/10):
+		if time_accumlator >= 0.8 / (1 + att_elapsed/10):
 			target_y -= move_distance
 			killzone.position.y -= move_distance
-			time_accumlator -= 0.75 / (1 + att_elapsed/10)
+			time_accumlator -= 0.8 / (1 + att_elapsed/10)
 			att_elapsed += 0.5
 		
 	position.y = lerp(position.y, target_y, lerp_speed * delta)
