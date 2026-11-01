@@ -9,13 +9,15 @@ extends Control
 
 var popup_code = preload("res://Transitioning Stuff/you_got_a_star.tscn")
 func _ready() -> void:
-	
+	GameController.tempTime = GameController.time
+	GameController.game_start = false
 	pass
 
 func _on_play_game_pressed() -> void:
 	$"Actual Click OMG".play()
 	$"CanvasLayer/Play Game".disabled = true
 	SceneLoaderScene.transition_to_scene(GameController.tempVars.room)
+	GameController.time = GameController.tempTime
 	GameController.game_start = true
 
 func _on_options_pressed() -> void:
