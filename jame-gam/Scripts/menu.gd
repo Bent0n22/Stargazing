@@ -5,6 +5,7 @@ extends Control
 @onready var Star3 = $"CanvasLayer2/Star 3"
 @onready var Star4 = $"CanvasLayer2/Star 4"
 @onready var Star5 = $"CanvasLayer2/Star 5"
+@onready var options: CanvasLayer = $options
 
 var popup_code = preload("res://Transitioning Stuff/you_got_a_star.tscn")
 func _ready() -> void:
@@ -45,7 +46,7 @@ func _on_play_game_pressed() -> void:
 func _on_options_pressed() -> void:
 	$"CanvasLayer/Options".disabled = true
 	$"Actual Click OMG".play()
-	#SceneLoaderScene.transition_to_scene("options.tscn")
+	options.visible = !options.visible
 
 func _on_exit_game_pressed() -> void:
 	$"CanvasLayer/Exit Game".disabled = true
@@ -88,9 +89,7 @@ func _process(_delta: float) -> void:
 
 func _on_texture_button_pressed() -> void:
 	$AudioStreamPlayer2D.play()
-	pass # Replace with function body.
 
 
 func _on_super_star_pressed() -> void:
 	$"AudioStreamPlayer2D2".play(0.25)
-	pass # Replace with function body.
