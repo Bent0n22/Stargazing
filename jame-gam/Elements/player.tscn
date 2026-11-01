@@ -5,8 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://b68mqqlmk6vs0" path="res://Assets/Sprites/Sprite-0001.png" id="2_epypp"]
 [ext_resource type="Texture2D" uid="uid://b4n2rlhsa862q" path="res://Assets/Sprites/LittleGuyWalk-Sheet.png" id="4_q6r6c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
-size = Vector2(11, 14)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cgbk6"]
+radius = 4.5
+height = 16.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
 atlas = ExtResource("2_0hol4")
@@ -68,7 +69,7 @@ script = ExtResource("1_0e48y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=188208629]
 position = Vector2(0.5, 1)
-shape = SubResource("RectangleShape2D_epypp")
+shape = SubResource("CapsuleShape2D_cgbk6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1212077977]
 z_index = 2
