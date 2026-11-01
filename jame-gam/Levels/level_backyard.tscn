@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://cjkl0wfwehtyj" path="res://Assets/Sprites/Cloud/Cloud.png" id="16_4hand"]
 [ext_resource type="Texture2D" uid="uid://rrlcuwi54ock" path="res://Assets/Sprites/ThisIsActuallyKeyHoleFrCubedButButNotReallyIDKManNamingFilesIsKindaDifficultLikeItIsBetterButNahNotReally.png" id="17_tos0t"]
 [ext_resource type="Texture2D" uid="uid://dm24bcre73ri5" path="res://Assets/Sprites/key.png" id="18_rertl"]
+[ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="19_32yly"]
+[ext_resource type="Texture2D" uid="uid://cx14bx8bubj1t" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff4.png" id="20_e4ldh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_66f1p"]
 texture = ExtResource("3_jsn4h")
@@ -429,19 +431,19 @@ point_count = 4
 
 [sub_resource type="Curve2D" id="Curve2D_rertl"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, -14.015, 116.25, -54.793945, 172.4755)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 27.107544, -77.49609, 0, 0, -14.015, 116.25, 47.92517, -174.59668)
 }
-point_count = 2
+point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_32yly"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, -14.015, 116.25, -32.131958, 208.76706)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -10.100098, 100.55417, 0, 0, -14.015, 116.25, -32.617676, 213.2121)
 }
-point_count = 2
+point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_e4ldh"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -56.950195, -23.045044, 0, 0, 0, 0, -101.27722, -23.52452, 0, 0, 0, 0, -130.93207, 8.240601, 0, 0, 0, 0, -138.22406, 54.66626, 0, 0, 0, 0, -108.836365, 102.51222, 0, 0, 0, 0, -61.033997, 156.47615, 0, 0, -14.015, 116.25, -2.3710327, 204.4608)
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -56.950195, -23.045044, 0, 0, 0, 0, -101.27722, -23.52452, 0, 0, 0, 0, -130.93207, 8.240601, 0, 0, 0, 0, -138.22406, 54.66626, 0, 0, 0, 0, -108.836365, 102.51222, 0, 0, 0, 0, -61.033997, 156.47615, 0, 0, -14.015, 116.25, -12.745911, 205.99513)
 }
 point_count = 8
 
@@ -600,10 +602,11 @@ root_node = NodePath("../Path/Follow")
 libraries/ = SubResource("AnimationLibrary_v5qog")
 
 [node name="Bee3" type="Node2D" parent="." unique_id=2126190792]
-position = Vector2(1220.9999, -529.00006)
+position = Vector2(1263.9999, -354)
 rotation = -0.573985
 script = ExtResource("15_4hand")
-time_to_complete_path = 6.0
+time_to_complete_path = 4.0
+time_break_between_paths = 1.0
 rotates = true
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="Bee3" unique_id=551987566]
@@ -617,23 +620,25 @@ one_way_collision = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bee3/AnimatableBody2D" unique_id=829568755]
 sprite_frames = SubResource("SpriteFrames_hoj8b")
 autoplay = "default"
+flip_h = true
 
 [node name="Path" type="Path2D" parent="Bee3" unique_id=1263710801]
 scale = Vector2(1.0138707, 1)
 curve = SubResource("Curve2D_rertl")
 
 [node name="Follow" type="PathFollow2D" parent="Bee3/Path" unique_id=915642649]
-rotation = 1.8784035
+rotation = -1.2343065
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bee3" unique_id=1543724923]
 root_node = NodePath("../Path/Follow")
 libraries/ = SubResource("AnimationLibrary_v5qog")
 
 [node name="Bee4" type="Node2D" parent="." unique_id=1208736323]
-position = Vector2(1313, -332)
+position = Vector2(1309, -334.00003)
 rotation = -0.573985
 script = ExtResource("15_4hand")
-time_to_complete_path = 3.0
+time_to_complete_path = 4.0
+time_break_between_paths = 1.0
 rotates = true
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="Bee4" unique_id=1890173737]
@@ -653,7 +658,7 @@ scale = Vector2(1.0138707, 1)
 curve = SubResource("Curve2D_32yly")
 
 [node name="Follow" type="PathFollow2D" parent="Bee4/Path" unique_id=1053465196]
-rotation = 1.723511
+rotation = 1.6709049
 scale = Vector2(-1, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Bee4" unique_id=1471171138]
@@ -735,3 +740,31 @@ texture = ExtResource("18_rertl")
 [node name="trans_trigger_on_interact2" parent="." unique_id=1228552358 instance=ExtResource("7_jsn4h")]
 position = Vector2(937, -287)
 file_to = "res://Levels/easter_egg.tscn"
+
+[node name="Arrows" type="Node2D" parent="." unique_id=683387782]
+position = Vector2(708, -197)
+
+[node name="Arrowsandstuff4" type="Sprite2D" parent="Arrows" unique_id=1649505695]
+position = Vector2(-31, 5)
+rotation = 1.5707964
+texture = ExtResource("19_32yly")
+
+[node name="Arrowsandstuff3" type="Sprite2D" parent="Arrows" unique_id=1028344516]
+position = Vector2(23, 4)
+rotation = -1.5707964
+texture = ExtResource("19_32yly")
+
+[node name="Arrowsandstuff5" type="Sprite2D" parent="Arrows" unique_id=1535536819]
+position = Vector2(-4, 84)
+rotation = 1.5707964
+texture = ExtResource("20_e4ldh")
+
+[node name="Arrowsandstuff6" type="Sprite2D" parent="Arrows" unique_id=1562468126]
+position = Vector2(695, 49)
+rotation = 3.1415927
+texture = ExtResource("19_32yly")
+
+[node name="Arrowsandstuff7" type="Sprite2D" parent="Arrows" unique_id=1359032370]
+position = Vector2(566, -161)
+rotation = 3.1415927
+texture = ExtResource("19_32yly")
