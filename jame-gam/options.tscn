@@ -28,54 +28,65 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.84705883, 0.6745098, 0.56078434, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Options" unique_id=1346866795]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Label" type="Label" parent="Options" unique_id=620735758]
+layout_mode = 0
 offset_top = 3.0
-offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Options/MarginContainer" unique_id=206069123]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Options/MarginContainer/VBoxContainer" unique_id=620735758]
-layout_mode = 2
+offset_right = 320.0
+offset_bottom = 22.0
 text = "  volume"
 label_settings = SubResource("LabelSettings_3qleb")
 
-[node name="volume" type="HSlider" parent="Options/MarginContainer/VBoxContainer" unique_id=19461960]
-layout_mode = 2
+[node name="volume" type="HSlider" parent="Options" unique_id=19461960]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 20.0
+offset_right = 315.0
+offset_bottom = 36.0
 max_value = 1.0
 step = 0.001
 
-[node name="mute" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=685605605]
-layout_mode = 2
+[node name="mute" type="CheckBox" parent="Options" unique_id=685605605]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 42.0
+offset_right = 65.0
+offset_bottom = 69.0
 theme_override_fonts/font = ExtResource("2_vmi34")
 theme_override_font_sizes/font_size = 19
 text = "Mute"
 
-[node name="fullscreen" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1968774003]
-layout_mode = 2
+[node name="fullscreen" type="CheckBox" parent="Options" unique_id=1968774003]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 68.0
+offset_right = 107.0
+offset_bottom = 95.0
 theme_override_fonts/font = ExtResource("2_vmi34")
 theme_override_font_sizes/font_size = 19
 text = "Fullscreen"
 
-[node name="death counter" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1102480532]
-layout_mode = 2
+[node name="death counter" type="CheckBox" parent="Options" unique_id=1102480532]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 93.0
+offset_right = 142.0
+offset_bottom = 120.0
 theme_override_fonts/font = ExtResource("2_vmi34")
 theme_override_font_sizes/font_size = 19
 text = "Death Counter"
 
-[node name="speedrun timer" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1913343487]
-layout_mode = 2
+[node name="speedrun timer" type="CheckBox" parent="Options" unique_id=1913343487]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 118.0
+offset_right = 144.0
+offset_bottom = 145.0
 theme_override_fonts/font = ExtResource("2_vmi34")
 theme_override_font_sizes/font_size = 19
 text = "Speedrun Timer"
 
-[node name="menu" type="Button" parent="." unique_id=754078220]
+[node name="menu" type="Button" parent="Options" unique_id=754078220]
+layout_mode = 0
 offset_left = 266.0
 offset_top = 121.0
 offset_right = 314.0
@@ -83,7 +94,8 @@ offset_bottom = 145.0
 theme_override_fonts/font = ExtResource("2_vmi34")
 text = "Menu"
 
-[node name="quit" type="Button" parent="." unique_id=227668134]
+[node name="quit" type="Button" parent="Options" unique_id=227668134]
+layout_mode = 0
 offset_left = 266.0
 offset_top = 150.0
 offset_right = 314.0
@@ -92,7 +104,8 @@ theme_override_fonts/font = ExtResource("2_vmi34")
 text = "Quit
 "
 
-[node name="back" type="Button" parent="." unique_id=227650020]
+[node name="back" type="Button" parent="Options" unique_id=227650020]
+layout_mode = 0
 offset_left = 266.0
 offset_top = 93.0
 offset_right = 314.0
@@ -101,13 +114,13 @@ theme_override_fonts/font = ExtResource("2_vmi34")
 text = "back"
 
 [connection signal="ready" from="Options" to="Options" method="_on_ready"]
-[connection signal="value_changed" from="Options/MarginContainer/VBoxContainer/volume" to="Options" method="_on_volume_value_changed"]
-[connection signal="toggled" from="Options/MarginContainer/VBoxContainer/mute" to="Options" method="_on_mute_toggled"]
-[connection signal="toggled" from="Options/MarginContainer/VBoxContainer/fullscreen" to="Options" method="_on_fullscreen_toggled"]
-[connection signal="toggled" from="Options/MarginContainer/VBoxContainer/death counter" to="Options" method="_on_death_counter_toggled"]
-[connection signal="toggled" from="Options/MarginContainer/VBoxContainer/speedrun timer" to="Options" method="_on_speedrun_timer_toggled"]
-[connection signal="pressed" from="menu" to="Options" method="_on_button_pressed"]
-[connection signal="pressed" from="menu" to="Options" method="_on_menu_pressed"]
-[connection signal="pressed" from="quit" to="Options" method="_on_button_2_pressed"]
-[connection signal="pressed" from="quit" to="Options" method="_on_quit_pressed"]
-[connection signal="pressed" from="back" to="Options" method="_on_back_pressed"]
+[connection signal="value_changed" from="Options/volume" to="Options" method="_on_volume_value_changed"]
+[connection signal="toggled" from="Options/mute" to="Options" method="_on_mute_toggled"]
+[connection signal="toggled" from="Options/fullscreen" to="Options" method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Options/death counter" to="Options" method="_on_death_counter_toggled"]
+[connection signal="toggled" from="Options/speedrun timer" to="Options" method="_on_speedrun_timer_toggled"]
+[connection signal="pressed" from="Options/menu" to="Options" method="_on_button_pressed"]
+[connection signal="pressed" from="Options/menu" to="Options" method="_on_menu_pressed"]
+[connection signal="pressed" from="Options/quit" to="Options" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Options/quit" to="Options" method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/back" to="Options" method="_on_back_pressed"]

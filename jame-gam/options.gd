@@ -1,11 +1,11 @@
 extends Control
 
 @onready var options: CanvasLayer = $".."
-@onready var volume: HSlider = $MarginContainer/VBoxContainer/volume
-@onready var mute: CheckBox = $MarginContainer/VBoxContainer/mute
-@onready var fullscreen: CheckBox = $MarginContainer/VBoxContainer/fullscreen
-@onready var death_counter: CheckBox = $"MarginContainer/VBoxContainer/death counter"
-@onready var speedrun_timer: CheckBox = $"MarginContainer/VBoxContainer/speedrun timer"
+@onready var volume: HSlider = $volume
+@onready var mute: CheckBox = $mute
+@onready var fullscreen: CheckBox = $fullscreen
+@onready var death_counter: CheckBox = $"death counter"
+@onready var speedrun_timer: CheckBox = $"speedrun timer"
 
 
 
@@ -16,10 +16,10 @@ func _ready() -> void:
 	death_counter.button_pressed = GlobalSettings.death_counter_is_checked
 	speedrun_timer.button_pressed = GlobalSettings.speedrun_timer_is_checked
 	if get_tree().current_scene.scene_file_path == ("res://menu.tscn"):
-		$"../menu".disabled = true
-		$"../menu".visible = false
-		$"../back".position.y = 121.0
-		$"../back".size.y = 24.0
+		$"menu".disabled = true
+		$"menu".visible = false
+		$"back".position.y = 121.0
+		$"back".size.y = 24.0
 func _on_volume_value_changed(new_value: float) -> void:
 	GlobalSettings.volume_value = new_value
 	AudioServer.set_bus_volume_db(0,linear_to_db(new_value))
