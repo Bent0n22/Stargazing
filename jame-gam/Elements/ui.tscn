@@ -20,6 +20,14 @@ script = ExtResource("1_fyqef")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=505839924]
 
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=317452113]
+offset_left = 2.0
+offset_top = 155.0
+offset_right = 42.0
+offset_bottom = 178.0
+theme_override_fonts/font = ExtResource("5_mehue")
+vertical_alignment = 2
+
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer" unique_id=278138098]
 offset_left = 303.0
 offset_top = 1.0

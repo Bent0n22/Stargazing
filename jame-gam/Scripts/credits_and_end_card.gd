@@ -47,11 +47,14 @@ func _process(_delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	GameController.stars.one = true
-	if !GameController.has_died_gruesomely:
+	if GameController.has_died_gruesomely == 0:
 		GameController.stars.three = true
-	GameController.has_died_gruesomely = false
+	GameController.has_died_gruesomely = 0
 	if GameController.time <= 400:
 		GameController.stars.two = true
+	GameController.time = 0
+	GameController.tempTime = 0
+	GameController.game_start = false
 	GameController.game_won = true
 	SceneLoaderScene.transition_to_scene("res://menu.tscn")
 	pass # Replace with function body.

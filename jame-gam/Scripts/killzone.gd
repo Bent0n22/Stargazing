@@ -12,7 +12,7 @@ func _on_body_entered(body: Node2D) -> void:
 	GameController.time_into_music = get_tree().get_current_scene().get_node("AudioStreamPlayer").get_playback_position()
 	if body.name == "CharacterBody2D":
 		stopCamX = true
-		GameController.has_died_gruesomely = true
+		GameController.has_died_gruesomely += 1
 		pbody = body
 		timer.start(3)
 		audio_stream_player_2d.play()

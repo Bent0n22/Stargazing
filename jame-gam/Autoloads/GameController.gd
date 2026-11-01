@@ -7,7 +7,7 @@ var game_won = false
 var game_start = false
 var time = 0
 var time_into_music = 0
-var has_died_gruesomely = false
+var has_died_gruesomely = 0
 var menu_instance = null
 var popup_active = false
 
@@ -45,6 +45,10 @@ func _physics_process(delta: float) -> void:
 
 func wait(time_in_seconds) -> void:
 	await get_tree().create_timer(time_in_seconds).timeout
+
+var tempTime = 0
+func pauseGame():
+	tempTime = time
 
 var persistant = {
 	
