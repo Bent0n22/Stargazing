@@ -32,6 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="30_txrau"]
 [ext_resource type="Texture2D" uid="uid://csrn1sn8i4pyk" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff3.png" id="31_khp6g"]
 [ext_resource type="Texture2D" uid="uid://utf8ox3c5srq" path="res://Assets/Sprites/CLIMB.png" id="32_khp6g"]
+[ext_resource type="Texture2D" uid="uid://cr60tx4qxecly" path="res://Assets/Font/Sign1.png" id="33_jfhgv"]
+[ext_resource type="Texture2D" uid="uid://b5f1lkaxmog34" path="res://Assets/Font/Sign4.png" id="34_mv0r0"]
+[ext_resource type="Texture2D" uid="uid://bmnudfopx1md" path="res://Assets/Font/Sign2.png" id="35_1n6sd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vlg1b"]
 texture = ExtResource("1_ic1cm")
@@ -929,3 +932,20 @@ texture = ExtResource("31_khp6g")
 [node name="Climb" type="Sprite2D" parent="Deco" unique_id=1367397781]
 position = Vector2(233, -608)
 texture = ExtResource("32_khp6g")
+
+[node name="Sign1" type="Sprite2D" parent="Deco" unique_id=341757222]
+position = Vector2(200, -43)
+texture = ExtResource("33_jfhgv")
+
+[node name="Sign4" type="Sprite2D" parent="Deco" unique_id=1224726625]
+position = Vector2(96, -156)
+texture = ExtResource("34_mv0r0")
+
+[node name="Sign2" type="Sprite2D" parent="Deco" unique_id=1607255422]
+position = Vector2(96, -178)
+texture = ExtResource("35_1n6sd")
+
+[node name="Arrowsandstuff4" type="Sprite2D" parent="." unique_id=1961077095]
+position = Vector2(-400, -353)
+scale = Vector2(-1, 1)
+texture = ExtResource("29_dtgt0")

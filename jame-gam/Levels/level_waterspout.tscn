@@ -14,6 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://dutgu61kvpm6r" path="res://Assets/Audio/waterspout.mp3" id="13_b5q0m"]
 [ext_resource type="Texture2D" uid="uid://utf8ox3c5srq" path="res://Assets/Sprites/CLIMB.png" id="14_023aw"]
 [ext_resource type="Script" uid="uid://bwkyxktrqs0rk" path="res://Transitioning Stuff/fixed_trans_trigger.gd" id="14_chk86"]
+[ext_resource type="Texture2D" uid="uid://b5f1lkaxmog34" path="res://Assets/Font/Sign4.png" id="15_wfuao"]
+[ext_resource type="Texture2D" uid="uid://yjsreeql0ve0" path="res://Assets/Font/Sign3.png" id="16_nusop"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f01tw"]
 texture = ExtResource("4_x2iaj")
@@ -199,6 +201,7 @@ initial_velocity_min = 20.0
 initial_velocity_max = 200.0
 
 [node name="killzone" parent="." unique_id=1968477143 instance=ExtResource("10_a77xb")]
+position = Vector2(0, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=68343287]
 position = Vector2(99, 54)
@@ -263,5 +266,13 @@ debug_color = Color(0, 0.6513631, 0.04072488, 0.41960785)
 [node name="Climb" type="Sprite2D" parent="." unique_id=488535766]
 position = Vector2(99, -26)
 texture = ExtResource("14_023aw")
+
+[node name="Sign4" type="Sprite2D" parent="." unique_id=1139695404]
+position = Vector2(57, 1)
+texture = ExtResource("15_wfuao")
+
+[node name="Sign3" type="Sprite2D" parent="." unique_id=705452886]
+position = Vector2(57, -18)
+texture = ExtResource("16_nusop")
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
