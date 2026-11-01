@@ -4,11 +4,17 @@ extends Control
 @onready var volume: HSlider = $MarginContainer/VBoxContainer/volume
 @onready var mute: CheckBox = $MarginContainer/VBoxContainer/mute
 @onready var fullscreen: CheckBox = $MarginContainer/VBoxContainer/fullscreen
+@onready var death_counter: CheckBox = $"MarginContainer/VBoxContainer/death counter"
+@onready var speedrun_timer: CheckBox = $"MarginContainer/VBoxContainer/speedrun timer"
+
+
 
 func _ready() -> void:
 	volume.value = GlobalSettings.volume_value
 	mute.button_pressed = GlobalSettings.mute_is_checked
 	fullscreen.button_pressed = GlobalSettings.fullscreen_is_checked
+	death_counter.button_pressed = GlobalSettings.death_counter_is_checked
+	speedrun_timer.button_pressed = GlobalSettings.speedrun_timer_is_checked
 
 func _on_volume_value_changed(new_value: float) -> void:
 	GlobalSettings.volume_value = new_value
@@ -26,6 +32,18 @@ func _on_fullscreen_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		get_window().borderless = false
 
+func _on_death_counter_toggled(toggled_on: bool) -> void:
+	GlobalSettings.death_counter_is_checked = toggled_on
+	
+
+func _on_speedrun_timer_toggled(toggled_on: bool) -> void:
+	GlobalSettings.speedrun_timer_is_checked = toggled_on
+	
+
+
+func _on_back_pressed() -> void:
+	options.visible = !options.visible
+	
 func _on_menu_pressed() -> void:
 	SceneLoaderScene.transition_to_scene("res://menu.tscn")
 	GameController.menu_instance.queue_free()
@@ -33,8 +51,3 @@ func _on_menu_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
-
-
-
-func _on_back_pressed() -> void:
-	options.visible = !options.visible
