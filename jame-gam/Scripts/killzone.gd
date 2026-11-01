@@ -4,6 +4,8 @@ extends Area2D
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var gpu_particles_2d: GPUParticles2D = $"../GPUParticles2D"
 
+
+
 @export var is_goop_zone: bool = false
 
 var stopCamX = false

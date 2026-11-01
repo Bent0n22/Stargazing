@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://bmnudfopx1md" path="res://Assets/Font/Sign2.png" id="19_oqecd"]
 [ext_resource type="Texture2D" uid="uid://cr60tx4qxecly" path="res://Assets/Font/Sign1.png" id="20_bo820"]
 [ext_resource type="Texture2D" uid="uid://1skjtqyartji" path="res://Assets/Sprites/Arrows and Stuff/arrowsandstuff1.png" id="21_hljap"]
+[ext_resource type="Texture2D" uid="uid://5o2hckhhrdi4" path="res://Assets/Sprites/watersplash.png" id="23_oqecd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f01tw"]
 texture = ExtResource("4_x2iaj")
@@ -162,6 +163,17 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evjyw"]
 size = Vector2(19, 62)
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bo820"]
+particle_flag_disable_z = true
+angle_min = 1.0728835e-05
+angle_max = 1.0728835e-05
+spread = 180.0
+initial_velocity_min = 26.88
+initial_velocity_max = 59.129997
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+gravity = Vector3(0, 98, 0)
+
 [node name="LevelWaterspout" type="Node2D" unique_id=204834342]
 script = ExtResource("1_b5q0m")
 
@@ -186,7 +198,7 @@ tile_map_data = PackedByteArray("AAABAAEAAAACAAEAAAACAAEAAAACAAEAAAADAAEAAAACAAE
 tile_set = SubResource("TileSet_1lm5o")
 script = ExtResource("3_f01tw")
 
-[node name="GPUParticles2D" type="CPUParticles2D" parent="." unique_id=5361539]
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=5361539]
 position = Vector2(99, -2018)
 rotation = -6.2831855
 amount = 120
@@ -205,6 +217,7 @@ initial_velocity_max = 200.0
 
 [node name="killzone" parent="." unique_id=1968477143 instance=ExtResource("10_a77xb")]
 position = Vector2(0, 8)
+is_goop_zone = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=68343287]
 position = Vector2(99, 54)
@@ -228,17 +241,17 @@ libraries/ = SubResource("AnimationLibrary_023aw")
 autoplay = &"new_animation"
 
 [node name="Player" type="Node2D" parent="." unique_id=1543226636]
+position = Vector2(2, 6)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Player" unique_id=826305916]
-position = Vector2(-24, 1)
 script = ExtResource("5_b5q0m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/CharacterBody2D" unique_id=577417303]
-position = Vector2(27.5, 5)
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_7vadr")
 
 [node name="Camera2D" type="Camera2D" parent="Player/CharacterBody2D/CollisionShape2D" unique_id=1739221761]
-position = Vector2(5.5, 0)
+position = Vector2(-0.5, 0)
 zoom = Vector2(1.8, 1.8)
 limit_left = 18
 limit_top = -9999975
@@ -248,7 +261,7 @@ script = ExtResource("8_jltnf")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/CharacterBody2D" unique_id=1024071860]
 z_index = 2
-position = Vector2(27, 4)
+position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_f01tw")
 animation = &"Idle"
 autoplay = "Idle"
@@ -319,5 +332,14 @@ texture = ExtResource("15_ar6hd")
 position = Vector2(147, -573)
 scale = Vector2(1, -1)
 texture = ExtResource("21_hljap")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=463125400]
+position = Vector2(112, -15)
+emitting = false
+amount = 178
+texture = ExtResource("23_oqecd")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_bo820")
 
 [connection signal="body_entered" from="fixed_trans_trigger/Area2D" to="fixed_trans_trigger" method="_on_area_2d_body_entered"]
