@@ -15,7 +15,8 @@ func _ready() -> void:
 	fullscreen.button_pressed = GlobalSettings.fullscreen_is_checked
 	death_counter.button_pressed = GlobalSettings.death_counter_is_checked
 	speedrun_timer.button_pressed = GlobalSettings.speedrun_timer_is_checked
-
+	if get_tree().current_scene.scene_file_path == ("res://menu.tscn"):
+		$"../menu".disabled = true
 func _on_volume_value_changed(new_value: float) -> void:
 	GlobalSettings.volume_value = new_value
 	AudioServer.set_bus_volume_db(0,linear_to_db(new_value))
@@ -31,16 +32,12 @@ func _on_fullscreen_toggled(toggled_on: bool) -> void:
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		get_window().borderless = false
-
 func _on_death_counter_toggled(toggled_on: bool) -> void:
 	GlobalSettings.death_counter_is_checked = toggled_on
 	
-
 func _on_speedrun_timer_toggled(toggled_on: bool) -> void:
 	GlobalSettings.speedrun_timer_is_checked = toggled_on
 	
-
-
 func _on_back_pressed() -> void:
 	options.visible = !options.visible
 	
