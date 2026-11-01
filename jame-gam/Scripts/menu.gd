@@ -45,7 +45,7 @@ func _on_play_game_pressed() -> void:
 func _on_options_pressed() -> void:
 	$"CanvasLayer/Options".disabled = true
 	$"Actual Click OMG".play()
-	SceneLoaderScene.transition_to_scene("options.tscn")
+	#SceneLoaderScene.transition_to_scene("options.tscn")
 
 func _on_exit_game_pressed() -> void:
 	$"CanvasLayer/Exit Game".disabled = true

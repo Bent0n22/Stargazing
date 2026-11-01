@@ -13,7 +13,9 @@
 [sub_resource type="LabelSettings" id="LabelSettings_3qleb"]
 font = ExtResource("2_vmi34")
 
-[node name="Options" type="Control" unique_id=883080698]
+[node name="options" type="CanvasLayer" unique_id=430517284]
+
+[node name="Options" type="Control" parent="." unique_id=883080698]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5v8ap")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1346866795]
+[node name="MarginContainer" type="MarginContainer" parent="Options" unique_id=1346866795]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,34 +32,34 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=206069123]
+[node name="VBoxContainer" type="VBoxContainer" parent="Options/MarginContainer" unique_id=206069123]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=620735758]
+[node name="Label" type="Label" parent="Options/MarginContainer/VBoxContainer" unique_id=620735758]
 layout_mode = 2
 text = "volume"
 label_settings = SubResource("LabelSettings_3qleb")
 
-[node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=19461960]
+[node name="volume" type="HSlider" parent="Options/MarginContainer/VBoxContainer" unique_id=19461960]
 layout_mode = 2
 max_value = 1.0
 step = 0.001
 
-[node name="mute" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=685605605]
+[node name="mute" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=685605605]
 layout_mode = 2
 text = "Mute"
 
-[node name="fullscreen" type="CheckBox" parent="MarginContainer/VBoxContainer" unique_id=1968774003]
+[node name="fullscreen" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1968774003]
 layout_mode = 2
 button_pressed = true
 text = "Fullscreen"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=648931193]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Options" unique_id=648931193]
 stream = ExtResource("2_se8ut")
 volume_db = -8.0
 autoplay = true
 
-[node name="Exit Game" type="TextureButton" parent="." unique_id=1477570968]
+[node name="Exit Game" type="TextureButton" parent="Options" unique_id=1477570968]
 layout_mode = 0
 offset_left = 256.0
 offset_top = 155.0
@@ -67,7 +69,7 @@ texture_normal = ExtResource("3_p8250")
 texture_pressed = ExtResource("4_kls10")
 texture_hover = ExtResource("2_ao2gm")
 
-[node name="Menu Button" type="TextureButton" parent="." unique_id=750077451]
+[node name="Menu Button" type="TextureButton" parent="Options" unique_id=750077451]
 layout_mode = 0
 offset_left = 256.0
 offset_top = 117.0
@@ -77,9 +79,9 @@ texture_normal = ExtResource("6_w5qgn")
 texture_pressed = ExtResource("7_vmi34")
 texture_hover = ExtResource("8_o5iem")
 
-[connection signal="ready" from="." to="." method="_on_ready"]
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/mute" to="." method="_on_mute_toggled"]
-[connection signal="toggled" from="MarginContainer/VBoxContainer/fullscreen" to="." method="_on_fullscreen_toggled"]
-[connection signal="pressed" from="Exit Game" to="." method="_on_exit_game_pressed"]
-[connection signal="pressed" from="Menu Button" to="." method="_on_menu_button_pressed"]
+[connection signal="ready" from="Options" to="Options" method="_on_ready"]
+[connection signal="value_changed" from="Options/MarginContainer/VBoxContainer/volume" to="Options" method="_on_volume_value_changed"]
+[connection signal="toggled" from="Options/MarginContainer/VBoxContainer/mute" to="Options" method="_on_mute_toggled"]
+[connection signal="toggled" from="Options/MarginContainer/VBoxContainer/fullscreen" to="Options" method="_on_fullscreen_toggled"]
+[connection signal="pressed" from="Options/Exit Game" to="Options" method="_on_exit_game_pressed"]
+[connection signal="pressed" from="Options/Menu Button" to="Options" method="_on_menu_button_pressed"]
