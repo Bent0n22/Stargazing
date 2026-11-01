@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://dbm3m33yafxpm"]
+
+[ext_resource type="Texture2D" uid="uid://dex50xqnpquv" path="res://Assets/Sprites/Youreastar/Imastar1.png" id="1_0o1vv"]
+[ext_resource type="Script" uid="uid://dyhu1beooqct8" path="res://Transitioning Stuff/you_got_a_star.gd" id="1_gf6kk"]
+[ext_resource type="Texture2D" uid="uid://5vku6k8dltxx" path="res://Assets/Sprites/Youreastar/Imastar2.png" id="2_7a7em"]
+[ext_resource type="Texture2D" uid="uid://bssj8oowf6yq7" path="res://Assets/Sprites/Youreastar/Imastar3.png" id="3_wynpr"]
+[ext_resource type="Texture2D" uid="uid://c7lgldeh0pvbv" path="res://Assets/Sprites/Youreastar/Imastar4.png" id="4_gf6kk"]
+[ext_resource type="Texture2D" uid="uid://c4yv5ey61jn5o" path="res://Assets/Sprites/StarDrawing.png" id="6_5q7e5"]
+[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="6_n0rpy"]
+[ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="7_n0rpy"]
+[ext_resource type="Texture2D" uid="uid://dymqpkkhcde8x" path="res://Assets/Sprites/Z Key/ZKeyBruv1.png" id="8_a4ilk"]
+[ext_resource type="Texture2D" uid="uid://03eutyle7645" path="res://Assets/Sprites/Z Key/ZKeyBruv2.png" id="9_03spm"]
+
+[sub_resource type="Animation" id="Animation_gf6kk"]
+resource_name = "Canvas Layer Fade"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5q7e5"]
+_data = {
+&"Canvas Layer Fade": SubResource("Animation_gf6kk")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tb2w5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0o1vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7a7em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wynpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gf6kk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v8ptl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_a4ilk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_03spm")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="YouGotAStar" type="Node2D" unique_id=194370269]
+script = ExtResource("1_gf6kk")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=683440427]
+libraries/ = SubResource("AnimationLibrary_5q7e5")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1178953715]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=57020047]
+position = Vector2(160, 91)
+sprite_frames = SubResource("SpriteFrames_tb2w5")
+frame_progress = 0.36662984
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1081701773]
+offset_left = 122.0
+offset_top = 26.0
+offset_right = 196.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("6_n0rpy")
+text = "Congrats!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer" unique_id=864206058]
+offset_left = 60.0
+offset_top = 43.0
+offset_right = 260.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("6_n0rpy")
+text = "You got a star! There are 5 remaining, so keep reaching for those stars!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="StarDrawing" type="Sprite2D" parent="CanvasLayer" unique_id=912287834]
+position = Vector2(160, 135)
+texture = ExtResource("6_5q7e5")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="CanvasLayer" unique_id=712777968]
+position = Vector2(252, 135)
+sprite_frames = SubResource("SpriteFrames_v8ptl")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1304965485]
+stream = ExtResource("7_n0rpy")
+pitch_scale = 0.75

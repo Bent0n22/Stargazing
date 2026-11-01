@@ -8,6 +8,20 @@ var game_start = false
 var time = 0
 var time_into_music = 0
 
+var stars = {
+	one = false,
+	two = false,
+	three = false,
+	four = false,
+	five = false
+}
+var has_prompted_for_star = {
+	one = false,
+	two = false,
+	three = false,
+	four = false,
+	five = false
+}
 func timeGame(playing, delta):
 	if playing:
 		time += delta
