@@ -46,7 +46,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 17.0
+"speed": 10.0
 }]
 
 [node name="EasterEgg" type="Node2D" unique_id=136087382]
@@ -76,13 +76,14 @@ label_settings = SubResource("LabelSettings_7vadr")
 wait_time = 5.0
 
 [node name="Little Guy" type="AnimatedSprite2D" parent="." unique_id=624958691]
-position = Vector2(32, 148)
+position = Vector2(48, 132)
+scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_tb2w5")
-frame_progress = 0.620046
+frame_progress = 0.7659599
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1218610629]
 stream = ExtResource("12_cgbk6")
-pitch_scale = 3.0
+pitch_scale = 2.66
 autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

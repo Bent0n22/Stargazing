@@ -15,21 +15,21 @@ func _process(delta: float) -> void:
 	else:
 		$Rainbowroad.position.x += 450 * delta
 	
-	if $"Little Guy".position.x < 290 and $"Little Guy".position.x > 30:
+	if $"Little Guy".position.x < 275 and $"Little Guy".position.x > 45:
 		$"Little Guy".position.x += 300 * delta * direction
-	elif $"Little Guy".position.x < 30:
+	elif $"Little Guy".position.x < 45:
 		direction = 1
 		$"Little Guy".position.x += 300 * delta * direction
-	elif $"Little Guy".position.x > 290:
+	elif $"Little Guy".position.x > 275:
 		direction = -1
 		$"Little Guy".position.x += 300 * delta * direction
 	
-	if $"Little Guy".position.y < 150 and $"Little Guy".position.y > 0:
+	if $"Little Guy".position.y < 134 and $"Little Guy".position.y > 0:
 		$"Little Guy".position.y += 300 * delta * diry
 	elif $"Little Guy".position.y < 0:
 		diry = 1
 		$"Little Guy".position.y += 300 * delta * diry
-	elif $"Little Guy".position.y > 150:
+	elif $"Little Guy".position.y > 134:
 		diry = -1
 		$"Little Guy".position.y += 300 * delta * diry
 
