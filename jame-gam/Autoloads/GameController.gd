@@ -8,6 +8,7 @@ var game_start = false
 var time = 0
 var time_into_music = 0
 var has_died_gruesomely = false
+var menu_instance = null
 
 var stars = {
 	one = false,
