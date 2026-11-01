@@ -1,5 +1,7 @@
 extends Node2D
 
+const PAUSE_MENU = preload("res://pause_menu.tscn")
+var menu_instance = null
 
 var grate1 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate1.png")
 var grate2 = preload("res://Assets/Sprites/Sewer Grates/SewerGrate2.png")
@@ -56,3 +58,16 @@ func _process(_delta: float) -> void:
 					child.texture = grate3
 				grate6:
 					child.texture = grate5
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Back"):
+		toggle_menu()
+func toggle_menu():
+	if menu_instance == null:
+		menu_instance = PAUSE_MENU.instantiate()
+		add_child(menu_instance)
+		#get_tree().paused = true
+	else:
+		menu_instance.queue_free()
+		menu_instance = null
+		#get_tree().paused = false

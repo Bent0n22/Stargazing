@@ -40,6 +40,7 @@ _data = {
 }
 
 [node name="Scene Loader Scene" type="Node2D" unique_id=873124418]
+process_mode = 3
 script = ExtResource("1_yq4sf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=60318234]

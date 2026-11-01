@@ -3,11 +3,15 @@
 [ext_resource type="Script" uid="uid://ceo4jepxqn778" path="res://options.gd" id="1_5v8ap"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="2_ao2gm"]
 [ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/menu.mp3" id="2_se8ut"]
+[ext_resource type="FontFile" uid="uid://b5ei6ytoqn6c0" path="res://Assets/Fonts/augiepixel.ttf" id="2_vmi34"]
 [ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="3_p8250"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="4_kls10"]
 [ext_resource type="Texture2D" uid="uid://inqg0jivc4d6" path="res://Assets/Sprites/Menu Buttons/Play Button7.png" id="6_w5qgn"]
 [ext_resource type="Texture2D" uid="uid://bokpskx00mopk" path="res://Assets/Sprites/Menu Buttons/Play Button9.png" id="7_vmi34"]
 [ext_resource type="Texture2D" uid="uid://bp80cyr7kul3u" path="res://Assets/Sprites/Menu Buttons/Play Button11.png" id="8_o5iem"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3qleb"]
+font = ExtResource("2_vmi34")
 
 [node name="Options" type="Control" unique_id=883080698]
 layout_mode = 3
@@ -32,6 +36,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=620735758]
 layout_mode = 2
 text = "volume"
+label_settings = SubResource("LabelSettings_3qleb")
 
 [node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=19461960]
 layout_mode = 2

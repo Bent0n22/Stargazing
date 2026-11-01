@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c5dsoc62ppn4o"]
+
+[ext_resource type="Script" uid="uid://c5eeu4yy3ewj1" path="res://pause_menu.gd" id="1_42xcf"]
+[ext_resource type="Texture2D" uid="uid://coobvfq20cvjy" path="res://Assets/Sprites/Name.png" id="1_mxa3g"]
+[ext_resource type="Shader" uid="uid://dvpeftn1svu1d" path="res://pause_menu.gdshader" id="2_1meuf"]
+[ext_resource type="Texture2D" uid="uid://inqg0jivc4d6" path="res://Assets/Sprites/Menu Buttons/Play Button7.png" id="2_e8sti"]
+[ext_resource type="Texture2D" uid="uid://cxo0s8tjk05df" path="res://Assets/Sprites/Menu Buttons/Play Button1.png" id="2_ub45p"]
+[ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_42xcf"]
+[ext_resource type="Texture2D" uid="uid://bokpskx00mopk" path="res://Assets/Sprites/Menu Buttons/Play Button9.png" id="3_q2yj1"]
+[ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="4_1meuf"]
+[ext_resource type="Texture2D" uid="uid://bp80cyr7kul3u" path="res://Assets/Sprites/Menu Buttons/Play Button11.png" id="4_a32ks"]
+[ext_resource type="Texture2D" uid="uid://brs4f4j72hpyu" path="res://Assets/Sprites/Menu Buttons/Play Button8.png" id="5_a32ks"]
+[ext_resource type="Texture2D" uid="uid://df62qj4pd0p8n" path="res://Assets/Sprites/Menu Buttons/Play Button2.png" id="5_g7dbl"]
+[ext_resource type="Texture2D" uid="uid://bty42hsnkxicd" path="res://Assets/Sprites/Menu Buttons/Play Button10.png" id="6_g7dbl"]
+[ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_lv42l"]
+[ext_resource type="Texture2D" uid="uid://dtjn64pocwqt7" path="res://Assets/Sprites/Menu Buttons/Play Button12.png" id="7_lv42l"]
+[ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_ub45p"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7vadr"]
+shader = ExtResource("2_1meuf")
+shader_parameter/blur_amount = 2.5
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=917403442]
+process_mode = 3
+layer = 5
+
+[node name="Control" type="Control" parent="." unique_id=1012833232]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_42xcf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1265875315]
+material = SubResource("ShaderMaterial_7vadr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Name" type="Sprite2D" parent="." unique_id=730771725]
+position = Vector2(159, 35)
+texture = ExtResource("1_mxa3g")
+
+[node name="Play Game" type="TextureButton" parent="." unique_id=1292063207]
+offset_left = 127.0
+offset_top = 75.0
+offset_right = 191.0
+offset_bottom = 107.0
+texture_normal = ExtResource("2_ub45p")
+texture_pressed = ExtResource("3_42xcf")
+texture_hover = ExtResource("4_1meuf")
+
+[node name="Menu Button" type="TextureButton" parent="Play Game" unique_id=1832461687]
+layout_mode = 0
+offset_top = 21.0
+offset_right = 64.0
+offset_bottom = 61.0
+texture_normal = ExtResource("2_e8sti")
+texture_pressed = ExtResource("3_q2yj1")
+texture_hover = ExtResource("4_a32ks")
+
+[node name="Options" type="TextureButton" parent="Play Game" unique_id=1362647635]
+layout_mode = 0
+offset_top = 42.0
+offset_right = 64.0
+offset_bottom = 74.0
+texture_normal = ExtResource("5_a32ks")
+texture_pressed = ExtResource("6_g7dbl")
+texture_hover = ExtResource("7_lv42l")
+
+[node name="Exit Game" type="TextureButton" parent="Play Game" unique_id=1639084339]
+layout_mode = 0
+offset_top = 63.0
+offset_right = 64.0
+offset_bottom = 103.0
+texture_normal = ExtResource("5_g7dbl")
+texture_pressed = ExtResource("6_lv42l")
+texture_hover = ExtResource("7_ub45p")
+
+[connection signal="pressed" from="Play Game" to="Control" method="_on_play_game_pressed"]
+[connection signal="pressed" from="Play Game/Menu Button" to="Control" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Play Game/Options" to="Control" method="_on_options_pressed"]
+[connection signal="pressed" from="Play Game/Exit Game" to="Control" method="_on_exit_game_pressed"]

@@ -25,7 +25,7 @@ func _on_fullscreen_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		get_window().borderless = false
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("Back"):
 		SceneLoaderScene.transition_to_scene(GameController.tempVars.room)
 		GameController.game_start = true
@@ -35,7 +35,3 @@ func _on_menu_button_pressed() -> void:
 
 func _on_exit_game_pressed() -> void:
 	get_tree().quit()
-
-
-func _on_ready() -> void:
-	volume.value_changed.connect(_on_volume_value_changed)
