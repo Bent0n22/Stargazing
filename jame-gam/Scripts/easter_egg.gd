@@ -3,7 +3,7 @@ extends Node2D
 @onready var timer: Timer = $Timer
 
 func _ready() -> void:
-	GameController.stars[3] = true
+	GameController.stars.four = true
 	timer.start(5)
 
 func _on_timer_timeout() -> void:

@@ -6,11 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://ba0tji80446ir" path="res://Assets/Sprites/Title.png" id="2_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://c4yv5ey61jn5o" path="res://Assets/Sprites/StarDrawing.png" id="3_iqepy"]
 [ext_resource type="Texture2D" uid="uid://c7k5cs1g7h33i" path="res://Assets/Sprites/Menu Buttons/Play Button3.png" id="3_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://c5bg2ffxnmffh" path="res://Assets/Sprites/Trophies/Trophy5.png" id="4_5h80m"]
 [ext_resource type="Texture2D" uid="uid://ledai6yc5x1c" path="res://Assets/Sprites/Menu Buttons/Play Button5.png" id="5_kk3ma"]
+[ext_resource type="Texture2D" uid="uid://b5i1na21knuoh" path="res://Assets/Sprites/Trophies/Trophy4.png" id="5_w25hu"]
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://elvo84vmuts" path="res://Assets/Sprites/Trophies/Trophy2.png" id="6_td6mg"]
 [ext_resource type="Texture2D" uid="uid://brs4f4j72hpyu" path="res://Assets/Sprites/Menu Buttons/Play Button8.png" id="7_dwrpx"]
+[ext_resource type="Texture2D" uid="uid://crbyx8pum8bbc" path="res://Assets/Sprites/Trophies/Trophy1.png" id="7_guify"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_kk3ma"]
 [ext_resource type="Texture2D" uid="uid://bty42hsnkxicd" path="res://Assets/Sprites/Menu Buttons/Play Button10.png" id="8_jspdm"]
+[ext_resource type="Texture2D" uid="uid://hmxw3fl2c8tt" path="res://Assets/Sprites/Trophies/Trophy3.png" id="8_oil5j"]
 [ext_resource type="AudioStream" uid="uid://3nr8tghlkks6" path="res://Assets/Audio/menu.mp3" id="9_nrnbx"]
 [ext_resource type="Texture2D" uid="uid://dtjn64pocwqt7" path="res://Assets/Sprites/Menu Buttons/Play Button12.png" id="9_oxnod"]
 [ext_resource type="AudioStream" uid="uid://dll0ie1jthj6k" path="res://Assets/Audio/coin.wav" id="11_h1wq0"]
@@ -30,18 +35,82 @@ script = ExtResource("1_4hy44")
 position = Vector2(160, 90)
 texture = ExtResource("2_kk3ma")
 
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer2" unique_id=792251152]
+[node name="Star 5" type="TextureButton" parent="CanvasLayer2" unique_id=792251152]
 offset_left = 301.0
 offset_top = 161.0
-offset_right = 341.0
-offset_bottom = 201.0
+offset_right = 317.0
+offset_bottom = 177.0
 texture_normal = ExtResource("3_iqepy")
 texture_pressed = ExtResource("3_iqepy")
 texture_hover = ExtResource("3_iqepy")
 texture_disabled = ExtResource("3_iqepy")
 texture_focused = ExtResource("3_iqepy")
 
-[node name="TextureButton2" type="TextureButton" parent="CanvasLayer2" unique_id=1428939544]
+[node name="Trophy5" type="Sprite2D" parent="CanvasLayer2/Star 5" unique_id=1054623898]
+position = Vector2(8, -10)
+texture = ExtResource("4_5h80m")
+
+[node name="Star 4" type="TextureButton" parent="CanvasLayer2" unique_id=1736776985]
+offset_left = 284.0
+offset_top = 161.0
+offset_right = 300.0
+offset_bottom = 177.0
+texture_normal = ExtResource("3_iqepy")
+texture_pressed = ExtResource("3_iqepy")
+texture_hover = ExtResource("3_iqepy")
+texture_disabled = ExtResource("3_iqepy")
+texture_focused = ExtResource("3_iqepy")
+
+[node name="Trophy4" type="Sprite2D" parent="CanvasLayer2/Star 4" unique_id=1043375780]
+position = Vector2(7, -11)
+texture = ExtResource("5_w25hu")
+
+[node name="Star 3" type="TextureButton" parent="CanvasLayer2" unique_id=1658745120]
+offset_left = 267.0
+offset_top = 161.0
+offset_right = 283.0
+offset_bottom = 177.0
+texture_normal = ExtResource("3_iqepy")
+texture_pressed = ExtResource("3_iqepy")
+texture_hover = ExtResource("3_iqepy")
+texture_disabled = ExtResource("3_iqepy")
+texture_focused = ExtResource("3_iqepy")
+
+[node name="Trophy2" type="Sprite2D" parent="CanvasLayer2/Star 3" unique_id=1590485863]
+position = Vector2(8, -11)
+texture = ExtResource("6_td6mg")
+
+[node name="Star 2" type="TextureButton" parent="CanvasLayer2" unique_id=1154786608]
+offset_left = 250.0
+offset_top = 161.0
+offset_right = 266.0
+offset_bottom = 177.0
+texture_normal = ExtResource("3_iqepy")
+texture_pressed = ExtResource("3_iqepy")
+texture_hover = ExtResource("3_iqepy")
+texture_disabled = ExtResource("3_iqepy")
+texture_focused = ExtResource("3_iqepy")
+
+[node name="Trophy1" type="Sprite2D" parent="CanvasLayer2/Star 2" unique_id=366245516]
+position = Vector2(8, -11)
+texture = ExtResource("7_guify")
+
+[node name="Star 1" type="TextureButton" parent="CanvasLayer2" unique_id=898574127]
+offset_left = 233.0
+offset_top = 161.0
+offset_right = 249.0
+offset_bottom = 177.0
+texture_normal = ExtResource("3_iqepy")
+texture_pressed = ExtResource("3_iqepy")
+texture_hover = ExtResource("3_iqepy")
+texture_disabled = ExtResource("3_iqepy")
+texture_focused = ExtResource("3_iqepy")
+
+[node name="Trophy3" type="Sprite2D" parent="CanvasLayer2/Star 1" unique_id=1244764702]
+position = Vector2(8, -11)
+texture = ExtResource("8_oil5j")
+
+[node name="I Star" type="TextureButton" parent="CanvasLayer2" unique_id=1428939544]
 offset_left = 243.0
 offset_top = 29.0
 offset_right = 252.0
@@ -85,8 +154,12 @@ autoplay = true
 stream = ExtResource("11_h1wq0")
 volume_db = -7.26
 
-[connection signal="pressed" from="CanvasLayer2/TextureButton" to="." method="_on_texture_button_pressed"]
-[connection signal="pressed" from="CanvasLayer2/TextureButton2" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Star 5" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Star 4" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Star 3" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Star 2" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Star 1" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="CanvasLayer2/I Star" to="." method="_on_texture_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Play Game" to="." method="_on_play_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="CanvasLayer/Exit Game" to="." method="_on_exit_game_pressed"]

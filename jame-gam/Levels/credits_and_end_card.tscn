@@ -305,7 +305,7 @@ frame_progress = 0.15203136
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=252085563]
 position = Vector2(-104, -30)
 sprite_frames = SubResource("SpriteFrames_6xw43")
-frame_progress = 0.95516187
+frame_progress = 0.10961267
 
 [node name="AnimatedSprite2D14" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=50406923]
 position = Vector2(-53, 74)
@@ -345,7 +345,7 @@ frame_progress = 0.054714367
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=910730757]
 position = Vector2(-49, -50)
 sprite_frames = SubResource("SpriteFrames_6xw43")
-frame_progress = 0.5084034
+frame_progress = 0.6628558
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="AnimatedSprite2D" unique_id=547559395]
 position = Vector2(22, -71)
