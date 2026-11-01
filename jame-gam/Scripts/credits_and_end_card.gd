@@ -6,7 +6,13 @@ var swfiii = false
 @onready var Z = $CanvasLayer/Z
 
 func _ready() -> void:
+	$CanvasLayer/Credits/Label4.text = "Your final time was " + str("%0.2f" % GameController.time) + " seconds"
 	GameController.tempVars.room = "res://Levels/level_tutorial.tscn"
+	
+	for child in $AnimatedSprite2D.get_children():
+		print(child)
+		GameController.wait(randf_range(0.75, 1.5))
+		child.play()
 	Z.visible = false
 	await GameController.wait(1.5)
 	anim.play("Play End Scene")
@@ -41,6 +47,9 @@ func _process(_delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	GameController.stars[0] = true
+	if GameController.time <= 400:
+		GameController.stars[1] = true
 	GameController.game_won = true
 	SceneLoaderScene.transition_to_scene("res://menu.tscn")
 	pass # Replace with function body.
