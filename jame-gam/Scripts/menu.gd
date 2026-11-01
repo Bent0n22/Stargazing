@@ -8,33 +8,8 @@ extends Control
 
 var popup_code = preload("res://Transitioning Stuff/you_got_a_star.tscn")
 func _ready() -> void:
-	if !GameController.has_prompted_for_star.one and GameController.stars.one:
-		var popup = popup_code.instantiate()
-		popup.star_num = 1
-		get_tree().get_current_scene().add_child(popup)
 	
-	if !GameController.has_prompted_for_star.two and GameController.stars.two:
-		var popup = popup_code.instantiate()
-		popup.star_num = 2
-		get_tree().get_current_scene().add_child(popup)
-	
-	if !GameController.has_prompted_for_star.three and GameController.stars.three:
-		var popup = popup_code.instantiate()
-		popup.star_num = 3
-		get_tree().get_current_scene().add_child(popup)
-	
-	if !GameController.has_prompted_for_star.four and GameController.stars.four:
-		var popup = popup_code.instantiate()
-		popup.star_num = 4
-		get_tree().get_current_scene().add_child(popup)
-	
-	if GameController.stars.one and GameController.stars.two and GameController.stars.three and GameController.stars.four:
-		GameController.stars.five = true
-	
-	if !GameController.has_prompted_for_star.five and GameController.stars.five:
-		var popup = popup_code.instantiate()
-		popup.star_num = 5
-		get_tree().get_current_scene().add_child(popup)
+	pass
 
 func _on_play_game_pressed() -> void:
 	$"Actual Click OMG".play()
@@ -53,6 +28,43 @@ func _on_exit_game_pressed() -> void:
 	get_tree().quit()
 
 func _process(_delta: float) -> void:
+	if !GameController.has_prompted_for_star.one and GameController.stars.one and !GameController.popup_active:
+		GameController.has_prompted_for_star.one = true
+		GameController.popup_active = true
+		var popup = popup_code.instantiate()
+		popup.star_num = 1
+		get_tree().get_current_scene().add_child(popup)
+	
+	if !GameController.has_prompted_for_star.two and GameController.stars.two  and !GameController.popup_active:
+		GameController.has_prompted_for_star.two = true
+		GameController.popup_active = true
+		var popup = popup_code.instantiate()
+		popup.star_num = 2
+		get_tree().get_current_scene().add_child(popup)
+	
+	if !GameController.has_prompted_for_star.three and GameController.stars.three and !GameController.popup_active:
+		GameController.has_prompted_for_star.three = true
+		GameController.popup_active = true
+		var popup = popup_code.instantiate()
+		popup.star_num = 3
+		get_tree().get_current_scene().add_child(popup)
+	
+	if !GameController.has_prompted_for_star.four and GameController.stars.four and !GameController.popup_active:
+		GameController.has_prompted_for_star.four = true
+		GameController.popup_active = true
+		var popup = popup_code.instantiate()
+		popup.star_num = 4
+		get_tree().get_current_scene().add_child(popup)
+	
+	if GameController.stars.one and GameController.stars.two and GameController.stars.three and GameController.stars.four:
+		GameController.stars.five = true
+	
+	if !GameController.has_prompted_for_star.five and GameController.stars.five and !GameController.popup_active:
+		GameController.has_prompted_for_star.five = true
+		GameController.popup_active = true
+		var popup = popup_code.instantiate()
+		popup.star_num = 5
+		get_tree().get_current_scene().add_child(popup)
 	if GameController.stars.one:
 		Star1.visible = true
 		Star1.disabled = false
