@@ -61,7 +61,6 @@ text = "Mute"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_vmi34")
 theme_override_font_sizes/font_size = 19
-button_pressed = true
 text = "Fullscreen"
 
 [node name="death counter" type="CheckBox" parent="Options/MarginContainer/VBoxContainer" unique_id=1102480532]

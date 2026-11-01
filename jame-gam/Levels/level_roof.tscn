@@ -11,6 +11,20 @@
 [ext_resource type="PackedScene" uid="uid://btj4h3g23u4c7" path="res://Elements/ui.tscn" id="9_nr7vr"]
 [ext_resource type="AudioStream" uid="uid://b6rx7t12h0vg6" path="res://Assets/Audio/crickets.mp3" id="10_g4ix3"]
 
+[sub_resource type="GDScript" id="GDScript_b1rql"]
+script/source = "extends Sprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tpbwa"]
 texture = ExtResource("4_gyfd2")
 0:2/0 = 0
@@ -85,6 +99,7 @@ script = ExtResource("1_g4ix3")
 [node name="StarBackground" type="Sprite2D" parent="." unique_id=1941992241]
 position = Vector2(144, -32)
 texture = ExtResource("1_br5fe")
+script = SubResource("GDScript_b1rql")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2038123888]
 script = ExtResource("2_br5fe")
