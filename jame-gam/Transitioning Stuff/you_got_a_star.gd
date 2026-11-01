@@ -31,7 +31,7 @@ func _ready() -> void:
 			print("error")
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Interact"):
 		GameController.popup_active = false
 		$AnimationPlayer.play("Canvas Layer Fade")

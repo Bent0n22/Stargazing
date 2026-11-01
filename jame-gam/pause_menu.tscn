@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://bf8vj3mm0inhm" path="res://Assets/Sprites/Menu Buttons/Play Button4.png" id="6_lv42l"]
 [ext_resource type="Texture2D" uid="uid://dtjn64pocwqt7" path="res://Assets/Sprites/Menu Buttons/Play Button12.png" id="7_lv42l"]
 [ext_resource type="Texture2D" uid="uid://dt2vms04o3dr2" path="res://Assets/Sprites/Menu Buttons/Play Button6.png" id="7_ub45p"]
+[ext_resource type="PackedScene" uid="uid://cts4kmjmxxpxu" path="res://options.tscn" id="16_0q2ao"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_7vadr"]
 shader = ExtResource("2_1meuf")
@@ -81,6 +82,9 @@ offset_bottom = 103.0
 texture_normal = ExtResource("5_g7dbl")
 texture_pressed = ExtResource("6_lv42l")
 texture_hover = ExtResource("7_ub45p")
+
+[node name="options" parent="." unique_id=430517284 instance=ExtResource("16_0q2ao")]
+visible = false
 
 [connection signal="pressed" from="Play Game" to="Control" method="_on_play_game_pressed"]
 [connection signal="pressed" from="Play Game/Menu Button" to="Control" method="_on_menu_button_pressed"]
