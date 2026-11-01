@@ -4,6 +4,7 @@ extends Node2D
 @export var pos_to: Vector2
 @export var backyardkeys: bool
 @onready var label: Label = $Area2D/CollisionShape2D/Label
+var interaction_locked = false
 
 var player_in_range = false
 
@@ -32,15 +33,17 @@ func _on_dialog_finished():
 	can_talk = true
 
 func _unhandled_input(_event):
-	if Input.is_action_just_pressed("Interact") && player_in_range && can_talk:
+	if Input.is_action_just_pressed("Interact") && player_in_range && can_talk && !interaction_locked:
 		if backyardkeys:
 			if GameController.key_count >= 2:
+				interaction_locked = true
 				GameController.tempVars.temp_pos = pos_to
 				GameController.time_into_music = 0
 				SceneLoaderScene.transition_to_scene(file_to)
 			else:
 				DialogManager.start_dialog(Vector2(1700, -66), lines, sfx)
 		else:
+			interaction_locked = true
 			GameController.time_into_music = 0
 			GameController.tempVars.temp_pos = pos_to
 			SceneLoaderScene.transition_to_scene(file_to)
