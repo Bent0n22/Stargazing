@@ -48,6 +48,14 @@ func _on_body_entered(body: Node2D) -> void:
 		get_tree().get_current_scene().get_node("Player").queue_free()
 		remember_little_guy = little_guy_ragdoll
 		pbody = null
+	elif body.name == "RigidBody2D":
+		if is_goop_zone:
+			var spawn_pos: Vector2 = body.global_position
+			spawn_pos.y -= 4
+			gpu_particles_2d.global_position = spawn_pos
+			gpu_particles_2d.restart()
+			gpu_particles_2d.emitting = true
+
 
 func _on_timer_timeout() -> void:
 	get_tree().get_current_scene().get_node("Ragdoll").queue_free()
