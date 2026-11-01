@@ -38,14 +38,17 @@ func _ready() -> void:
 
 func _on_play_game_pressed() -> void:
 	$"Actual Click OMG".play()
+	$"CanvasLayer/Play Game".disabled = true
 	SceneLoaderScene.transition_to_scene(GameController.tempVars.room)
 	GameController.game_start = true
 
 func _on_options_pressed() -> void:
+	$"CanvasLayer/Options".disabled = true
 	$"Actual Click OMG".play()
 	SceneLoaderScene.transition_to_scene("options.tscn")
 
 func _on_exit_game_pressed() -> void:
+	$"CanvasLayer/Exit Game".disabled = true
 	$"Actual Click OMG".play()
 	get_tree().quit()
 
