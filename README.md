@@ -22,4 +22,4 @@ It was an entry to the Jame Gam game jam.
 Credits to Towball for music. 
 
 https://boredchef.itch.io/stargazing
-(If you are downloading the game, simply unzip the archive and run 'game.exe')
+(If you are downloading the game, simply unzip the archive and run 'Stargazing.exe')
