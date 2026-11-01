@@ -2,6 +2,10 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var gpu_particles_2d: GPUParticles2D = $"../GPUParticles2D"
+
+@export var is_goop_zone: bool = false
+
 var stopCamX = false
 var pbody
 var remember_little_guy
@@ -16,6 +20,15 @@ func _on_body_entered(body: Node2D) -> void:
 		pbody = body
 		timer.start(3)
 		audio_stream_player_2d.play(0.25)
+		if is_goop_zone:
+			var spawn_pos: Vector2 = body.global_position
+			spawn_pos.y -= 4
+			gpu_particles_2d.global_position = spawn_pos
+			gpu_particles_2d.restart()
+			gpu_particles_2d.emitting = true
+		else:
+			pass
+		
 		var little_guy_ragdoll = ragdoll_of_fun_and_whimsy.instantiate()
 		little_guy_ragdoll.global_position = body.global_position
 		little_guy_ragdoll.get_node("RigidBody2D").linear_velocity = body.velocity
