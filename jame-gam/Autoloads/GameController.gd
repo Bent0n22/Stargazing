@@ -9,6 +9,7 @@ var time = 0
 var time_into_music = 0
 var has_died_gruesomely = false
 var menu_instance = null
+var popup_active = false
 
 var stars = {
 	one = false,

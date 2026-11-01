@@ -1,11 +1,20 @@
 extends Node2D
 
 var star_num: int
+var star_nums = {
+	one = false,
+	two = false,
+	three = false,
+	four = false,
+	five = false,
+	}
 @onready var label = $CanvasLayer/Label2
 func _ready() -> void:
+	GameController.popup_active = true
 	$AudioStreamPlayer.play()
 	$CanvasLayer/AnimatedSprite2D.play("default")
 	$CanvasLayer/AnimatedSprite2D2.play("default")
+	
 	
 	match star_num:
 		1:
@@ -24,4 +33,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("Interact"):
+		GameController.popup_active = false
+		$AnimationPlayer.play("Canvas Layer Fade")
+		await $AnimationPlayer.animation_finished
 		self.queue_free()
