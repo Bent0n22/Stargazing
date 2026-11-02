@@ -51,7 +51,7 @@ func _on_texture_button_pressed() -> void:
 	if GameController.has_died_gruesomely == 0:
 		GameController.stars.three = true
 	GameController.has_died_gruesomely = 0
-	if GameController.time <= 400:
+	if GameController.time <= 120:
 		GameController.stars.two = true
 	GameController.time = 0
 	GameController.tempTime = 0

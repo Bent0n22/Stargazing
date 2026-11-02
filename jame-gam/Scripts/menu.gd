@@ -9,6 +9,11 @@ extends Control
 
 var popup_code = preload("res://Transitioning Stuff/you_got_a_star.tscn")
 func _ready() -> void:
+	if GameController.stars.one and GameController.stars.two and GameController.stars.three and !GameController.stars.four and !GameController.popup_active:
+		GameController.popup_active = true
+		var popup = popup_code.instantiate()
+		popup.star_num = -1
+		get_tree().get_current_scene().add_child(popup)
 	GameController.tempTime = GameController.time
 	GameController.game_start = false
 	
